@@ -1,0 +1,290 @@
+@prefix ex: <http://example.org/videogamestore/> .
+@prefix schema: <https://schema.org/>  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/> .
+@prefix sto: <https://w3id.org/i40/sto> .
+@prefix dcat: <http://www.w3.org/ns/dcat> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix kees: <http://linkeddata.center/kees/v1#> . baf
+@prefix vcard: <http://www.w3.org/2018/vcard-new/1#> .
+@prefix	muto: <http://purl.org/muto/core#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# CUSTOM DEFINITIONS -- completed
+ex:Library	rdf:type	rdfs:Class;
+		rdfs:label	"A group of source codes"@en.
+
+ex:Wallet	rdf:type	rdfs:Class;
+		rdfs:label	"Class representing storage for money".
+
+ex:minimalValue	rdf:type	rdfs:Property;
+		rdfs:label	"The minimum allowed value"@en;
+		rdfs:range	xsd:decimal.
+
+ex:recommendedValue	rdf:type	rdfs:Property;
+			rdfs:label	"The value recommended for certain object"@en;
+			rdfs:range	xsd:decimal.
+
+ex:PlaysOn	a 		rdf:Property;
+		rdfs:label	"Specifies that subject can be played on object";
+		rdfs:domain	schema:Game;
+		rdfs:range	schema:gamePlatform.
+
+
+# WALLETS -- completed
+ex:peters-wallet	a 		ex:Wallet;
+                	schema:value 	1234;
+                	schema:currency "EUR".
+
+
+ex:thomas-wallet	a 		ex:Wallet;
+                	schema:value 	456;
+                	schema:currency "CZK".
+
+ex:marie-wallet		a 		ex:Wallet;
+                	schema:value 	1024;
+                	schema:currency "EUR".
+
+# ACCOUNTS -- completed
+ex:peter	a			foaf:OnlineAccount;
+		foaf:accountName	"Peter1";
+## change email to URI
+		vcard:hasEmail 		"peter@example.com",
+                			"franta@vomacka.cz";
+                kees:password 		"1234";
+                locn:address 		"Mulholland Drive 73"@en;
+
+		foaf:made		ex:peter-review;
+		schema:knows		ex:thomas;
+		muto:hasAccess		ex:thomas-library;
+		schema:owns		ex:peter-library;
+		schema:owns		ex:peter-wallet.
+
+ex:thomas	a			foaf:OnlineAccount;
+		foaf:accountName	"Thomas24";
+		vcard:hasEmail 		"thomas@example.com";
+               	kees:password 		"strongPassword";
+               	locn:address 		"Czechia"@en;
+
+## Could it be that schema:owns implies muto:hasAccess should both relations be present?
+		schema:knows		ex:peter;
+		schema:knows		ex:marie;
+		muto:hasAccess		ex:peter-library;
+		foaf:made		ex:negative-review;
+		schema:owns		ex:thomas-library;
+		schema:owns		ex:thomas-wallet.
+
+ex:karel	a			foaf:OnlineAccount;
+		foaf:accountName	"Karel";
+		vcard:hasEmail 		"karel@example.com";
+                kees:password 		"strongPassword";
+                locn:address 		"Slovakia"@en;
+
+		schema:identifier	ex:SuperCarRace;
+		foaf:made		ex:positive-review;
+		schema:owns		ex:karel-library.
+
+
+ex:marie	a			foaf:OnlineAccount;
+		foaf:accountName	"Maria";
+		vcard:hasEmail 		"maria@example.com";
+                kees:password 		"strongPassword";
+                locn:address 		"Slovakia"@en;
+
+		schema:identifier	ex:SuperCarRace;
+		schema:identifier	ex:KillThemAll;
+		muto:hasAccess		ex:thomas-library;
+		schema:knows		ex:thomas;
+		schema:owns		ex:marie-wallet.
+
+
+
+# LIBRARIES -- completed
+ex:thomas-library	a	ex:Library.
+ex:peter-library	a	ex:Library.
+ex:karel-library	a	ex:Library.
+ex:marie-library	a	ex:Library.
+
+
+# SOFTWARE -- completed
+ex:vim-editor		a 			dcterms:software;
+			dcterms:title		"VIM";
+			schema:ratingValue	4.4;
+
+			sto:hasPublisher 	ex:no-publisher;
+			frapo:hasCost		ex:one-hundred;
+			schema:isPartOf		ex:peter-library.
+
+ex:emacs		a			dcterms:software;
+			dcterms:title		"EMACS";
+			schema:ratingValue	2;
+
+			sto:hasPublisher 	ex:no-publisher;
+			frapo:hasCost		ex:one-hundred;
+			schema:isPartOf		ex:karel-library.
+
+ex:vlc-player		a			dcterms:software;
+			dcterms:title		"vlc";
+			schema:ratingValue	5;
+
+			sto:hasPublisher ex:no-publisher;
+			frapo:hasCost	ex:five-hundred;
+			schema:isPartOf	ex:thomas-library.
+			
+# PRICES -- completed
+ex:one-thousand		a		saref:Price;
+			schema:value	1000.0;
+			schema:currency	"CZK".
+
+ex:one-hundred		a		saref:Price;
+			schema:value	100.0;
+			schema:currency	"CZK".
+
+
+ex:five-hundred		a		saref:Price;
+			schema:value	500.0;
+			schema:currency	"CZK".
+
+# REVIEWS -- completed
+ex:negative-review 	a 			schema:Review;
+                	schema:reviewRating 	1;
+                	schema:dateCreated 	"2020-04-10"^^xsd:date;
+                	schema:ratingValue 	false;
+                	schema:activityDuration "P1DT2H"^^xsd:duration;
+                	schema:commentText 	"What a piece of *****"@en,
+                				"To je ale ******"@cs;
+
+			schema:itemReviewed	ex:KillThemAll.
+
+
+ex:positive-review	a 			schema:Review;
+                	schema:reviewRating 	5;
+                	schema:dateCreated 	"2020-05-05"^^xsd:date;
+                	schema:ratingValue 	true;
+                	schema:activityDuration "P0Y20M0D"^^xsd:duration;
+                	schema:commentText 	"I love it"@en,
+                				"Nejlepší hra"@cs;
+
+			schema:itemReviewed	ex:KillThemAll.
+
+
+ex:peter-review		a 			schema:Review;
+                	schema:reviewRating 	5;
+                	schema:dateCreated 	"2020-05-05"^^xsd:date;
+                	schema:ratingValue 	true;
+                	schema:activityDuration "P0Y03M0D"^^xsd:duration;
+                	schema:commentText 	"The best game ever"@en;
+
+			schema:itemReviewed	ex:SuperCarRace.
+
+
+# GAMES (wishlist, softwareAddOn, requires)
+
+ex:KillThemAll		a 			schema:VideoGame;
+			dcterms:title		"KillThemAll"@en;
+			schema:ratingValue 	"4"^^xsd:decimal;
+            		schema:comment	 	"The best game out there"@en,
+						"Das bestes Computerspiel da draußen"@de;
+
+			dcterms:requires	ex:CPU-req;
+			dcterms:requires	ex:16GB-ram;
+			schema:isPartOf		ex:shooter;
+			ex:playsOn		ex:Windows;
+			ex:playsOn		ex:Playstation;
+			frapo:hasCost		ex:one-thousand;
+			schema:isPartOf		ex:thomas-library,
+						ex:karel-library;
+            		sto:hasPublisher 	ex:mega-publisher.
+
+
+ex:SuperCarRace		a 			schema:VideoGame;
+			dcterms:title		"Need for speed"@en;
+			schema:ratingValue 	"5"^^xsd:decimal;
+            		schema:comment	 	"Who is the fastest?"@en;
+			
+			dcterms:requires	ex:8GB-ram;
+			schema:isPartOf		ex:racing;
+			ex:playsOn		ex:Playstation;
+			frapo:hasCost		ex:five-hundred;
+			schema:isPartOf		ex:peter-library;
+            		sto:hasPublisher 	ex:mega-publisher.
+			
+
+
+ex:Minecraft		a 			schema:VideoGame;
+			dcterms:title		"Minecraft"@en;
+			schema:ratingValue 	"4.4"^^xsd:decimal;
+            		schema:comment	 	"Could you kill the dragon"@en;
+		
+			schema:isPartOf		ex:building;
+			ex:playsOn		ex:Windows;
+			frapo:hasCost		ex:one-thousand;
+			schema:isPartOf		ex:thomas-library;
+			schema:isPartOf		ex:karel-library;	
+			schema:isPartOf		ex:marie-library;	
+			schema:isPartOf		ex:peter-library;
+			schema:softwareAddOn	ex:dungeonDlc;
+            		sto:hasPublisher 	ex:super-publisher.
+
+# GAME PLATFORMS -- completed
+ex:MacOs		a			schema:gamePlatform;
+			dcterms:title		"Macintosh".
+
+ex:Windows		a			schema:gamePlatform;
+			dcterms:title		"Win_x86".
+
+ex:Playstation		a			schema:gamePlatform;
+			dcterms:title		"PlayStation".
+
+# REQUIREMENTS -- completed
+## Is the subclass represented this way correctly, the inheritance and it is correctly in the graph?
+ex:8GB-ram	a 			schema:memoryRequirements;
+		ex:minimalValue		8;
+		ex:recommendedValue 	16;
+		schema:unitText		"GB".
+
+ex:16GB-ram	a 			schema:memoryRequirements;
+		ex:minimalValue		16;
+		ex:recommendedValue 	32;
+		schema:unitText		"GB".
+
+ex:CPU-req	a 			schema:processorRequirements;
+		ex:minimalValue		2.4;
+		ex:recommendedValue 	3.6;
+		schema:unitText		"GHz".
+
+ex:GPU-req	a 			schema:Concept;
+		ex:minimalValue		1;
+		ex:recommendedValue 	2;
+		schema:unitText		"GB".
+
+# DLC -- completed
+ex:dungenDlc	a	schema:Concept.
+		
+
+
+# PUBLISHERS -- completed
+ex:mega-publisher	a 		dcat:publisher;
+                	dcterms:title 	"Mega Games s.r.o."@en.
+
+ex:super-games		a 		dcat:publisher;
+                	dcterms:title 	"Super Games s.r.o."@en.
+
+ex:no-publisher		a 		dcat:publisher;
+                	dcterms:title 	"Open Source Project"@en.
+
+
+# GENRE -- completed
+ex:shooter	a 		dcterms:type;
+	       	dcterms:title 	"Shooting Game"@en.
+
+ex:building	a 		dcterms:type;
+                dcterms:title 	"Building Game"@en.
+
+ex:racing	a 		dcterms:type;
+                dcterms:title 	"Racing"@en.

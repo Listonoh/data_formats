@@ -1,0 +1,6 @@
+#Vypise vsechny lahve co jsou na sklade se vsema informacema o lahvi i o destlerkach
+
+SELECT *
+WHERE {
+    ?bottle cis:inStock = true bat\sparql.bat --version bat\sparql.bat --version
+}

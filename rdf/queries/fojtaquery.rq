@@ -1,0 +1,37 @@
+# filename: fojtaquery.rq
+
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns>
+PREFIX dcterms: <http://purl.org/dc/terms>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX dcat: <http://www.w3.org/ns/dcat> 
+PREFIX npg: <http://ns.nature.com/terms/year> 
+PREFIX bevon: <http://rdfs.co/bevon/latest/html> 
+PREFIX cis: <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> 
+PREFIX schema: <http://schema.org> 
+PREFIX cerif: <http://www.eurocris.org/ontologies/cerif/1.3> 
+
+SELECT ?Penis
+WHERE
+{
+    vcard:001 dcterms:name ?Penis .
+}
+
+SELECT ?Pica
+WHERE
+{
+    bevon:101 dcterms:name ?Pica .
+}
+
+
+SELECT ?Prdel ?n
+WHERE
+{
+    bevon:101 dcterms:hailsFrom ?Prdel 
+    vcard:?Prdel dcterms:name ?n 
+}
+
+SELECT ?bottle 
+WHERE
+{
+    ?bottle a dcterms:BottleDescription.
+}
