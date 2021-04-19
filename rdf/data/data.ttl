@@ -112,33 +112,28 @@ schema:00001            a       schema:Transaction ;
                 dcterms:ammountMl       200 ;
                 cerif:price             0 ;
                 npg:creationTime        "2020-12-31T23:57:00"^^xsd:dateTime ;
-                dcat:transaction        bevon:fojtiseq_laga16 .
+                dcat:bottle             bevon:fojtiseq_laga16 ;
+                dcat:buyer              vcard:fojtiseq .
 
 schema:00002            a       schema:Transaction ;
                 dcterms:ammountMl       400 ;
                 cerif:price             120 ;
                 npg:creationTime        "2020-12-31T23:58:00"^^xsd:dateTime ;
-                dcat:bottle             bevon:honziq_redb12 .
-
-dca           dcat:buyer              vcard:fojtiseq   ;
+                dcat:bottle             bevon:honziq_redb12 ;
+                dcat:buyer              vcard:fojtiseq .
 
 schema:00003            a       schema:Transaction ;
                 dcterms:ammountMl       1000 ;
                 cerif:price             420 ;
-                npg:creationTime             "2021-01-12T12:;
-                dcat:buyer              vcard:fojtiseq .0:00"^^xsd:dateTime ;
-                dcat:bottle        bevon:matyseq_laga16 .
+                npg:creationTime        "2021-01-12T12:00:00"^^xsd:dateTime ;
+                dcat:bottle             bevon:matyseq_laga16 ;
+                dcat:buyer              vcard:matisek .
 
 #Ownership
 schema:10001            a       schema:Ownership ;
                 npg:ownedFrom           "1939-09-01T00:00:00"^^xsd:dateTime ;
-                dcat:share                   100 ;
-;
-                dcat:buyer              vcard:matisek .                dcat:bottle        bevon:fojtiseq_laga16 .
-                npg:ownedFrom           "1939-09-01T00:00:00"^^xsd:dateTime ;
-                dcat:share                   100 ;
-;
-                dcat:buyer              vcard:matisek .                dcat:bottle        bevon:fojtiseq_laga16 .
+                dcat:share              100 ;
+                dcat:ownership          bevon:fojtiseq_laga16 .
 
 schema:10002            a       schema:Ownership ;
                 npg:ownedFrom           "2020-02-20T20:20:20"^^xsd:dateTime ;
