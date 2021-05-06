@@ -1,0 +1,285 @@
+# filename: data.ttl
+
+@prefix ex: <http://example.org/whiskeyman/> .
+# to delete @prefix vcard: <http://www.w3.org/2006/vcard/ns> .
+@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat> .
+@prefix npg: <http://ns.nature.com/terms/year> .
+@prefix bevon: <http://rdfs.co/bevon/latest/html> .
+@prefix cis: <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .	
+@prefix schema: <http://schema.org> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# custom definitions
+ex:Customer rdfs:subClassOf schema:Person;
+    rdfs:label "A class containing all informations about customer"@en.
+
+ex:Distillery rdf:type rdfs:Class
+    rdfs:label ""@en.
+
+ex:Bottle rdf:type rdfs:Class
+    rdfs:label ""@en.
+
+ex:NfcTag rdf:type rdfs:Class
+    rdfs:label ""@en.
+
+ex:Description rdf:type rdfs:Class
+    rdfs:label ""@en.
+
+ex:Transaction rdf:type rdfs:Class
+    rdfs:label ""@en.
+
+ex:Ownership rdf:type rdfs:Class
+    rdfs:label ""@en.
+
+ex:SpecialPrice rdf:type rdfs:Class
+    rdfs:label ""@en.
+
+
+
+
+
+ex:PriceForMLInCZK rdf:type rdf:Property
+    rdfs:range	schema:Number.
+
+ex:PriceForBottleInCZK rdf:type rdf:Property
+    rdfs:range	schema:Number.
+
+ex:Owns rdf:type rdf:Property
+    rdfs:label ""@en;
+    rdfs:domain	ex:Customer;
+    rdfs:range	ex:Ownership.
+
+ex:TransactionMadeBY rdf:type rdf:Property
+    rdfs:label ""@en;
+    rdfs:domain	ex:Transaction.
+    rdfs:range	ex:Customer;
+
+ex:DescribedBy rdf:type rdf:Property
+    rdfs:label ""@en;
+    rdfs:domain	ex:Bottle;
+    rdfs:range	ex:Description.
+
+ex:InStock rdf:type rdf:Property
+    rdfs:label ""@en;
+    rdfs:domain	ex:Bottle;
+    rdfs:range	schema:Boolean.
+
+ex:AmmountMl rdf:type rdf:Property
+    rdfs:label ""@en;
+    rdfs:domain	schema:Transaction;
+    rdfs:range	schema:Number.
+
+
+
+#Region
+ex:islay     a    place:Region ;
+        dcterms:name  "Islay"@en .
+ex:highland  a    place:Region ;
+        dcterms:name  "Highland"@en .
+ex:speyside  a    place:Region ;
+        dcterms:name  "Speyside"@en .
+ex:ireland   a    place:Region ;
+        dcterms:name  "Ireland"@en.
+
+#Distillery
+
+ex:laga      a    ex:Distillery;
+        dcterms:name        "Lagavulin"@en ; 
+        npg:founded         1816 ;
+        place:Region   ex:islay .
+
+ex:bowm      a    ex:Distillery ;
+        dcterms:name    "Bowmore"@en ; 
+        npg:founded     1779 ;
+        place:Region   ex:highland ,
+                            ex:speyside .
+
+ex:glen      a    ex:Distillery ;
+        dcterms:name    "Glenmorangie"@en ; 
+        npg:founded     1843 ;
+        place:Region   ex:speyside .
+
+ex:redb      a    ex:Distillery ;  
+        dcterms:name    "Redbreast"@en ; 
+        npg:founded     1903 ;
+        place:Region   ex:ireland .
+
+#BottleDescription
+ex:laga16  a    ex:Description ;
+                dcterms:name            "Lagavulin 16 y.o." ;
+                foaf:age                16  ;
+                dcat:alcoholByVolume    43  ;
+                ex:Distillery          ex:laga .
+
+ex:glen15  a    ex:Description ;
+                dcterms:name            "Glenfiddich 15 y.o." ;
+                foaf:age                15  ;
+                dcat:alcoholByVolume    40  ;
+                ex:Distillery          ex:glen .
+
+ex:bowm18  a    ex:Description ;
+                dcterms:name            "Bowmore 18 y.o." ;
+                foaf:age                18  ;
+                dcat:alcoholByVolume    43  ;
+                ex:Distillery          ex:bowm .
+
+ex:redb12  a    ex:Description ;
+                dcterms:name            "Redbreast 12 y.o." ;
+                foaf:age                12  ;
+                dcat:alcoholByVolume    40  ;
+                ex:Distillery          ex:redb .                 
+
+#Bottle
+ex:matyseq_laga16    a       ex:Bottle  ;
+        ex:PriceForMLInCZK          69.0 ;
+        ex:PriceForBottleInCZK      1130 ;
+        schema:purchaseDate         "1999-09-01T00:00:00"^^xsd:dateTime ;
+        ex:InStock                  False ;
+        schema:Barcode              1348690 ;
+        ex:DescribedBy              ex:laga16 .
+
+ex:matyseq_glen15    a       ex:Bottle ;
+        ex:PriceForMLInCZK          87 ;
+        ex:PriceForBottleInCZK      978 ;
+        schema:purchaseDate         "1939-09-01T00:00:00"^^xsd:dateTime ;
+        cis:inStock                 True ;
+        schema:barcode              3454665 ;
+        ex:DescribedBy              ex:glen15 .
+
+ex:fojtiseq_laga16   a       ex:Bottle ;
+        ex:PriceForMLInCZK          76 ;
+        ex:PriceForBottleInCZK      1159 ;
+        ex:InStock                  True ;
+        schema:purchaseDate         "2020-02-20T20:20:20"^^xsd:dateTime ;
+        schema:barcode              2345657 ;
+        ex:DescribedBy              ex:laga16 .
+
+ex:honziq_redb12     a       ex:Bottle ;
+        ex:PriceForMLInCZK          90 ;
+        ex:PriceForBottleInCZK      1430 ;
+        ex:InStock                  True ;
+        schema:barcode              1235112 ;
+        ex:DescribedBy              ex:redb12 .
+
+ex:vojta_bowm18     a       ex:Bottle ;
+        ex:PriceForMLInCZK          175 ;
+        ex:PriceForBottleInCZK      1930 ;
+        schema:purchaseDate         "2021-01-12T12:00:00"^^xsd:dateTime ;
+        ex:InStock                  True ;
+        schema:barcode              7777777 ;
+        ex:DescribedBy              ex:bowm18 .
+
+
+#Transaction
+ex:tr-00001            a       ex:Transaction ;
+                ex:AmmountMl            200 ;
+                schema:Price            0 ;
+                cerif:currency          "CZK";
+                npg:CreationTime        "2020-12-31T23:57:00"^^xsd:dateTime ;
+                ex:Bottle               ex:fojtiseq_laga16 ;
+                ex:TransactionMadeBY    ex:fojtiseq .
+
+ex:tr-00002            a       ex:Transaction ;
+                ex:AmmountMl            400 ;
+                schema:Price            120 ;
+                cerif:currency          "CZK";
+                npg:CreationTime        "2020-12-31T23:58:00"^^xsd:dateTime ;
+                ex:Bottle               ex:honziq_redb12 ;
+                ex:TransactionMadeBY    ex:fojtiseq .
+
+ex:tr-00003            a       ex:Transaction ;
+                ex:AmmountMl           1000 ;
+                schema:Price           69000 ;
+                cerif:currency         "CZK";
+                npg:CreationTime       "2021-01-12T12:00:00"^^xsd:dateTime ;
+                ex:Bottle              ex:matyseq_laga16 ;
+                ex:TransactionMadeBY   ex:matisek .
+
+#Ownership
+ex:ow-10001            a       ex:Ownership ;
+                dcat:share              100 ;
+                ex:Bottle          ex:fojtiseq_laga16 .
+
+ex:ow-10002            a       ex:Ownership ;
+                dcat:share              50 ;
+                ex:Bottle          ex:honziq_redb12  .
+
+ex:ow-10003            a       ex:Ownership ;
+                dcat:share              50 ;
+                ex:Bottle          ex:matyseq_redb12 .
+
+#SpecialPrice
+ex:matFor65             a       ex:SpecialPrice;
+                ex:PriceForMLInCZK      65 ;
+                ex:Bottle               ex:matyseq_laga16 .
+
+ex:for00             a       ex:SpecialPrice;
+                schema:PriceForMLInCZK  0 ;
+                ex:Bottle               ex:fojtiseq_laga16 .
+
+ex:matFor50             a       ex:SpecialPrice;
+                schema:PriceForMLInCZK  50 ;
+                ex:Bottle               ex:honziq_redb12 .
+
+
+#Customer
+ex:matisek           a       ex:Customer ;
+                schema:givenName        "Matyas" ;
+                schema:familyName       "Brabec" ;
+                schema:email            "Stooped@hotmail.com" ;
+                dcterms:login           "KutalejiciseKrava" ;
+                ex:Owns                 ex:ow-10003 ;
+                ex:SpecialPrice         ex:matFor65 ,
+                                        ex:matFor50 ;
+                ex:NfcTag               ex:testTag .
+
+
+
+ex:fojtiseq          a       ex:Customer ;
+                schema:givenName        "Vojtech" ;
+                schema:familyName       "Brecka";
+                schema:email            "HyperKraken@hotmail.com" ;
+                dcterms:login           "TurboKraken" ;
+                ex:Owns                 ex:ow-10001 ;
+                ex:SpecialPrice         ex:for00 ;
+                ex:NfcTag               ex:testTag ,
+                                        ex:fojtisequv .
+
+
+ex:kulicka           a       ex:Customer ;
+                schema:givenName        "Vojtech" ;
+                schema:familyName       "Mykiska" ;
+                schema:email            "TurboBurt@nitroParek.com" ;
+                dcterms:login           "TurboBurt" ;
+                ex:NfcTag               ex:kulickuv .
+
+ex:listecek          a       ex:Customer ;
+                schema:givenName        "Lee" ; 
+                schema:familyName       "Stack" ;
+                schema:email            "Listonoh@ddd.com" ;
+                dcterms:login           "LeeStack" ;
+                ex:Owns                 ex:ow-10002 ;
+                ex:NfcTag               ex:listSvobod .
+
+#Nfc tag
+ex:testTag            a         ex:NfcTag ;
+                dcterms:code            "OXPR456ADS75" ;
+                npg:created             "2020-06-09"^^xsd:date .
+
+ex:fojtisequv         a         ex:NfcTag ;
+                dcterms:code            "OXPC987ADS75" ;
+                npg:created             "2001-09-11"^^xsd:date .
+
+ex:kulickuv           a         ex:NfcTag ;
+                dcterms:code            "OXPZ6940ADS75" ;
+                npg:created             "2012-04-20"^^xsd:date .
+
+ex:listSvobod           a         ex:NfcTag ;
+                dcterms:code            "OXPZ5540ADS75" ;
+                npg:created             "2022-04-20"^^xsd:date .
