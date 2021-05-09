@@ -1,17 +1,12 @@
 # filename: data.ttl
 
 @prefix ex: <http://example.org/whiskeyman/> .
-# to delete @prefix vcard: <http://www.w3.org/2006/vcard/ns> .
-# @prefix dcterms: <http://purl.org/dc/terms> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-# @prefix npg: <http://ns.nature.com/terms/year> .
 @prefix whisky: <https://vocab.org/whisky/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat> .
 
-
 @prefix cis: <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .	
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
 @prefix schema: <http://schema.org> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -172,6 +167,7 @@ ex:honziq_redb12     a       ex:Bottle ;
         cerif:currency          "CZK";
         ex:PriceForBottle       1430 ;
         ex:InStock              true ;
+        schema:purchaseDate     "2020-02-20T20:20:20"^^xsd:dateTime ;
         schema:barcode          1235112 ;
         ex:DescribedBy          ex:redb12 .
 
@@ -221,7 +217,7 @@ ex:ow-10002            a        ex:Ownership ;
 
 ex:ow-10003            a        ex:Ownership ;
         ex:Share                50 ;
-        ex:Bottle               ex:matyseq_redb12 .
+        ex:Bottle               ex:honziq_redb12 .
 
 #SpecialPrice
 ex:matFor65             a       ex:SpecialPrice;
@@ -249,8 +245,7 @@ ex:matisek           a       ex:Customer ;
         ex:Login                "KutalejiciseKrava" ;
         ex:Owns                 ex:ow-10003 ;
         ex:SpecialPrice         ex:matFor65 ,
-                                ex:matFor50 ;
-        ex:NfcTag               ex:testTag .
+                                ex:matFor50 .
 
 
 

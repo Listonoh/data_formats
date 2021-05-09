@@ -1,0 +1,214 @@
+[
+    {
+        "bottleID": 1,
+        "shotPrice": {
+            "value": 69,
+            "currency": "CZK"
+        },
+        "inStock": false,
+        "barcode": "1348690",
+        "purchaseDate": "1999-09-01T00:00:00",
+        "Ownerships": [],
+        "SpecialPrices": [
+            {
+                "price": {
+                    "value": 65,
+                    "currency": "CZK"
+                },
+                "customerID": 1
+            }
+        ],
+        "Described": {
+            "name": "Lagavulin 16 y.o.",
+            "voltage": 43,
+            "age": 16,
+            "Distillery": {
+                "name": "Lagavulin",
+                "founded": 1816,
+                "Region": [
+                    {
+                        "name": "Islay"
+                    }
+                ]
+            }
+        },
+        "Transactions": [],
+        "bottlePrice": {
+            "value": 1130,
+            "currency": "CZK"
+        }
+    },
+    {
+        "bottleID": 2,
+        "shotPrice": {
+            "value": 87,
+            "currency": "CZK"
+        },
+        "inStock": true,
+        "barcode": "3454665",
+        "purchaseDate": "1939-09-01T00:00:00",
+        "Ownerships": [],
+        "SpecialPrices": [],
+        "Described": {
+            "name": "Glenfiddich 15 y.o.",
+            "voltage": 40,
+            "age": 15,
+            "Distillery": {
+                "name": "Glenmorangie",
+                "founded": 1843,
+                "Region": [
+                    {
+                        "name": "Speyside"
+                    }
+                ]
+            }
+        },
+        "Transactions": [],
+        "bottlePrice": {
+            "value": 978,
+            "currency": "CZK"
+        }
+    },
+    {
+        "bottleID": 3,
+        "shotPrice": {
+            "value": 76,
+            "currency": "CZK"
+        },
+        "inStock": true,
+        "barcode": "2345657",
+        "purchaseDate": "2020-02-20T20:20:20",
+        "Ownerships": [
+            {
+                "share": 100,
+                "customerID": 2
+            }
+        ],
+        "SpecialPrices": [
+            {
+                "price": {
+                    "value": 0,
+                    "currency": "CZK"
+                },
+                "customerID": 2
+            }
+        ],
+        "Described": {
+            "name": "Lagavulin 16 y.o.",
+            "voltage": 43,
+            "age": 16,
+            "Distillery": {
+                "name": "Lagavulin",
+                "founded": 1816,
+                "Region": [
+                    {
+                        "name": "Islay"
+                    }
+                ]
+            }
+        },
+        "Transactions": [
+            {
+                "ammountMl": 200,
+                "price": {
+                    "value": 0,
+                    "currency": "CZK"
+                },
+                "creationTime": "2020-12-31T23:57:00",
+                "customerID": 2
+            }
+        ],
+        "bottlePrice": {
+            "value": 1159,
+            "currency": "CZK"
+        }
+    },
+    {
+        "bottleID": 4,
+        "shotPrice": {
+            "value": 90,
+            "currency": "CZK"
+        },
+        "inStock": true,
+        "barcode": "1235112",
+        "purchaseDate": "2020-02-20T20:20:20",
+        "Ownerships": [
+            {
+                "share": 50,
+                "customerID": 4
+            }
+        ],
+        "SpecialPrices": [
+            {
+                "price": {
+                    "value": 50,
+                    "currency": "CZK"
+                },
+                "customerID": 1
+            }
+        ],
+        "Described": {
+            "name": "Redbreast 12 y.o.",
+            "voltage": 40,
+            "age": 12,
+            "Distillery": {
+                "name": "Redbreast",
+                "founded": 1903,
+                "Region": [
+                    {
+                        "name": "Ireland"
+                    }
+                ]
+            }
+        },
+        "Transactions": [
+            {
+                "ammountMl": 400,
+                "price": {
+                    "value": 120,
+                    "currency": "CZK"
+                },
+                "creationTime": "2020-12-31T23:58:00",
+                "customerID": 2
+            }
+        ],
+        "bottlePrice": {
+            "value": 1430,
+            "currency": "CZK"
+        }
+    },
+    {
+        "bottleID": 5,
+        "shotPrice": {
+            "value": 175,
+            "currency": "CZK"
+        },
+        "inStock": true,
+        "barcode": "7777777",
+        "purchaseDate": "2021-01-12T12:00:00",
+        "Ownerships": [],
+        "SpecialPrices": [],
+        "Described": {
+            "name": "Bowmore 18 y.o.",
+            "voltage": 43,
+            "age": 18,
+            "Distillery": {
+                "name": "Bowmore",
+                "founded": 1779,
+                "Region": [
+                    {
+                        "name": "Highland"
+                    },
+                    {
+                        "name": "Speyside"
+                    }
+                ]
+            }
+        },
+        "Transactions": [],
+        "bottlePrice": {
+            "value": 1930,
+            "currency": "CZK"
+        }
+    }
+]

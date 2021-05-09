@@ -1,0 +1,167 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://example.com/BottleDescription.schema.json",
+    "title": "Customers",
+    "description": "Customers of the store",
+    "uniqueItems": true,
+    "type": "array",
+    "minItems": 1,
+    "definitions": {
+        "Price": {
+            "type": "object",
+            "required": [
+                "value",
+                "currency"
+            ],
+            "properties": {
+                "value": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "currency": {
+                    "type": "string",
+                    "description": "Code of currency"
+                }
+            }
+        },
+        "NfcTag": {
+            "type": "object",
+            "required": [
+                "code",
+                "creationTime"
+            ],
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "creationTime": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Transaction": {
+            "type": "object",
+            "required": [
+                "ammountMl",
+                "price",
+                "creationTime",
+                "bottleID"
+            ],
+            "properties": {
+                "ammountMl": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "price": {
+                    "$ref": "#/definitions/Price"
+                },
+                "creationTime": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "bottleID": {
+                    "type": "number"
+                }
+            }
+        },
+        "SpecialPrice": {
+            "type": "object",
+            "required": [
+                "price",
+                "bottleID"
+            ],
+            "properties": {
+                "price": {
+                    "$ref": "#/definitions/Price"
+                },
+                "bottleID": {
+                    "type": "number"
+                }
+            }
+        },
+        "Ownership": {
+            "type": "object",
+            "required": [
+                "share",
+                "bottleID"
+            ],
+            "properties": {
+                "share": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "description": "percentage share of the bottle in question"
+                },
+                "bottleID": {
+                    "type": "number"
+                }
+            }
+        }
+    },
+    "items": {
+        "type": "object",
+        "title": "Customer",
+        "properties": {
+            "CustomerID": {
+                "type": "number"
+            },
+            "name": {
+                "type": "string"
+            },
+            "givenName": {
+                "type": "string"
+            },
+            "familyName": {
+                "type": "string"
+            },
+            "email": {
+                "type": "string",
+                "format": "email"
+            },
+            "login": {
+                "type": "string"
+            },
+            "Ownerships": {
+                "type": "array",
+                "minItems": 0,
+                "items": {
+                    "$ref": "#/definitions/Ownership"
+                }
+            },
+            "SpecialPrices": {
+                "minItems": 0,
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/SpecialPrice"
+                }
+            },
+            "NfcTag": {
+                "minItems": 0,
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/NfcTag"
+                }
+            },
+            "Transactions": {
+                "minItems": 0,
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/Transaction"
+                }
+            }
+        },
+        "required": [
+            "CustomerID",
+            "name",
+            "givenName",
+            "familyName",
+            "email",
+            "login",
+            "Ownerships",
+            "SpecialPrices",
+            "Transactions",
+            "NfcTag"
+        ]
+    }
+}
