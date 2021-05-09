@@ -1,20 +1,16 @@
 [
     {
         "bottleID": 1,
-        "shotPrice": {
-            "value": 69,
-            "currency": "CZK"
-        },
+        "shotPrice": 69,
+        "currency": "CZK",
         "inStock": false,
         "barcode": "1348690",
         "purchaseDate": "1999-09-01T00:00:00",
         "Ownerships": [],
         "SpecialPrices": [
             {
-                "price": {
-                    "value": 65,
-                    "currency": "CZK"
-                },
+                "price": 65,
+                "currency": "CZK",
                 "customerID": 1
             }
         ],
@@ -33,10 +29,7 @@
             }
         },
         "Transactions": [],
-        "bottlePrice": {
-            "value": 1130,
-            "currency": "CZK"
-        }
+        "bottlePrice": 1130
     },
     {
         "bottleID": 2,
@@ -64,17 +57,12 @@
             }
         },
         "Transactions": [],
-        "bottlePrice": {
-            "value": 978,
-            "currency": "CZK"
-        }
+        "bottlePrice": 978
     },
     {
         "bottleID": 3,
-        "shotPrice": {
-            "value": 76,
-            "currency": "CZK"
-        },
+        "shotPrice": 76,
+        "currency": "CZK",
         "inStock": true,
         "barcode": "2345657",
         "purchaseDate": "2020-02-20T20:20:20",
@@ -86,10 +74,8 @@
         ],
         "SpecialPrices": [
             {
-                "price": {
-                    "value": 0,
-                    "currency": "CZK"
-                },
+                "price": 0,
+                "currency": "CZK",
                 "customerID": 2
             }
         ],
@@ -110,25 +96,18 @@
         "Transactions": [
             {
                 "ammountMl": 200,
-                "price": {
-                    "value": 0,
-                    "currency": "CZK"
-                },
+                "price": 0,
+                "currency": "CZK",
                 "creationTime": "2020-12-31T23:57:00",
                 "customerID": 2
             }
         ],
-        "bottlePrice": {
-            "value": 1159,
-            "currency": "CZK"
-        }
+        "bottlePrice": 1159
     },
     {
         "bottleID": 4,
-        "shotPrice": {
-            "value": 90,
-            "currency": "CZK"
-        },
+        "shotPrice": 90,
+        "currency": "CZK",
         "inStock": true,
         "barcode": "1235112",
         "purchaseDate": "2020-02-20T20:20:20",
@@ -140,10 +119,8 @@
         ],
         "SpecialPrices": [
             {
-                "price": {
-                    "value": 50,
-                    "currency": "CZK"
-                },
+                "price": 50,
+                "currency": "CZK",
                 "customerID": 1
             }
         ],
@@ -164,25 +141,18 @@
         "Transactions": [
             {
                 "ammountMl": 400,
-                "price": {
-                    "value": 120,
-                    "currency": "CZK"
-                },
+                "price": 120,
+                "currency": "CZK",
                 "creationTime": "2020-12-31T23:58:00",
                 "customerID": 2
             }
         ],
-        "bottlePrice": {
-            "value": 1430,
-            "currency": "CZK"
-        }
+        "bottlePrice": 1430
     },
     {
         "bottleID": 5,
-        "shotPrice": {
-            "value": 175,
-            "currency": "CZK"
-        },
+        "shotPrice": 175,
+        "currency": "CZK",
         "inStock": true,
         "barcode": "7777777",
         "purchaseDate": "2021-01-12T12:00:00",
@@ -206,9 +176,6 @@
             }
         },
         "Transactions": [],
-        "bottlePrice": {
-            "value": 1930,
-            "currency": "CZK"
-        }
+        "bottlePrice": 1930
     }
 ]

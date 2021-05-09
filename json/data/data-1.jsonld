@@ -1,0 +1,326 @@
+[
+    {
+        "@context": {
+            "bottleID": "http://example.org/whiskeyman/BottleID",
+            "CustomerID": "http://example.org/whiskeyman/CustomerID",
+            "login": "http://example.org/whiskeyman/Login",
+            "Ownerships": "http://example.org/whiskeyman/Ownership",
+            "share": "http://example.org/whiskeyman/Share",
+            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
+            "Distillery": "http://example.org/whiskeyman/Distillery",
+            "founded": "http://example.org/whiskeyman/Founded",
+            "Region": "http://example.org/whiskeyman/Region",
+            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
+            "shotPrice": "http://example.org/whiskeyman/PriceForML",
+            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
+            "NfcTag": "http://example.org/whiskeyman/NfcTag",
+            "inStock": "http://example.org/whiskeyman/InStock",
+            "Transactions": "http://example.org/whiskeyman/Transaction",
+            "Described": "http://example.org/whiskeyman/DescribedBy",
+            "name": "http://schema.org/name",
+            "givenName": "http://schema.org/givenName",
+            "familyName": "http://schema.org/familyName",
+            "email": "http://schema.org/email",
+            "price": "http://schema.org/price",
+            "purchaseDate": "http://schema.org/purchaseDate",
+            "creationTime": "http://schema.org/purchaseDate",
+            "barcode": "http://schema.org/barcode",
+            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
+            "voltage": "https://vocab.org/whisky/terms/voltage",
+            "age": "https://vocab.org/whisky/terms/age"
+        },
+        "bottleID": 1,
+        "shotPrice": 69,
+        "currency": "CZK",
+        "inStock": false,
+        "barcode": "1348690",
+        "purchaseDate": "1999-09-01T00:00:00",
+        "Ownerships": [],
+        "SpecialPrices": [
+            {
+                "price": 65,
+                "currency": "CZK",
+                "customerID": 1
+            }
+        ],
+        "Described": {
+            "name": "Lagavulin 16 y.o.",
+            "voltage": 43,
+            "age": 16,
+            "Distillery": {
+                "name": "Lagavulin",
+                "founded": 1816,
+                "Region": [
+                    {
+                        "name": "Islay"
+                    }
+                ]
+            }
+        },
+        "Transactions": [],
+        "bottlePrice": 1130
+    },
+    {
+        "@context": {
+            "bottleID": "http://example.org/whiskeyman/BottleID",
+            "CustomerID": "http://example.org/whiskeyman/CustomerID",
+            "login": "http://example.org/whiskeyman/Login",
+            "Ownerships": "http://example.org/whiskeyman/Ownership",
+            "share": "http://example.org/whiskeyman/Share",
+            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
+            "Distillery": "http://example.org/whiskeyman/Distillery",
+            "founded": "http://example.org/whiskeyman/Founded",
+            "Region": "http://example.org/whiskeyman/Region",
+            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
+            "shotPrice": "http://example.org/whiskeyman/PriceForML",
+            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
+            "NfcTag": "http://example.org/whiskeyman/NfcTag",
+            "inStock": "http://example.org/whiskeyman/InStock",
+            "Transactions": "http://example.org/whiskeyman/Transaction",
+            "Described": "http://example.org/whiskeyman/DescribedBy",
+            "name": "http://schema.org/name",
+            "givenName": "http://schema.org/givenName",
+            "familyName": "http://schema.org/familyName",
+            "email": "http://schema.org/email",
+            "price": "http://schema.org/price",
+            "purchaseDate": "http://schema.org/purchaseDate",
+            "creationTime": "http://schema.org/purchaseDate",
+            "barcode": "http://schema.org/barcode",
+            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
+            "voltage": "https://vocab.org/whisky/terms/voltage",
+            "age": "https://vocab.org/whisky/terms/age"
+        },
+        "bottleID": 2,
+        "shotPrice": {
+            "value": 87,
+            "currency": "CZK"
+        },
+        "inStock": true,
+        "barcode": "3454665",
+        "purchaseDate": "1939-09-01T00:00:00",
+        "Ownerships": [],
+        "SpecialPrices": [],
+        "Described": {
+            "name": "Glenfiddich 15 y.o.",
+            "voltage": 40,
+            "age": 15,
+            "Distillery": {
+                "name": "Glenmorangie",
+                "founded": 1843,
+                "Region": [
+                    {
+                        "name": "Speyside"
+                    }
+                ]
+            }
+        },
+        "Transactions": [],
+        "bottlePrice": 978
+    },
+    {
+        "@context": {
+            "bottleID": "http://example.org/whiskeyman/BottleID",
+            "CustomerID": "http://example.org/whiskeyman/CustomerID",
+            "login": "http://example.org/whiskeyman/Login",
+            "Ownerships": "http://example.org/whiskeyman/Ownership",
+            "share": "http://example.org/whiskeyman/Share",
+            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
+            "Distillery": "http://example.org/whiskeyman/Distillery",
+            "founded": "http://example.org/whiskeyman/Founded",
+            "Region": "http://example.org/whiskeyman/Region",
+            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
+            "shotPrice": "http://example.org/whiskeyman/PriceForML",
+            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
+            "NfcTag": "http://example.org/whiskeyman/NfcTag",
+            "inStock": "http://example.org/whiskeyman/InStock",
+            "Transactions": "http://example.org/whiskeyman/Transaction",
+            "Described": "http://example.org/whiskeyman/DescribedBy",
+            "name": "http://schema.org/name",
+            "givenName": "http://schema.org/givenName",
+            "familyName": "http://schema.org/familyName",
+            "email": "http://schema.org/email",
+            "price": "http://schema.org/price",
+            "purchaseDate": "http://schema.org/purchaseDate",
+            "creationTime": "http://schema.org/purchaseDate",
+            "barcode": "http://schema.org/barcode",
+            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
+            "voltage": "https://vocab.org/whisky/terms/voltage",
+            "age": "https://vocab.org/whisky/terms/age"
+        },
+        "bottleID": 3,
+        "shotPrice": 76,
+        "currency": "CZK",
+        "inStock": true,
+        "barcode": "2345657",
+        "purchaseDate": "2020-02-20T20:20:20",
+        "Ownerships": [
+            {
+                "share": 100,
+                "customerID": 2
+            }
+        ],
+        "SpecialPrices": [
+            {
+                "price": 0,
+                "currency": "CZK",
+                "customerID": 2
+            }
+        ],
+        "Described": {
+            "name": "Lagavulin 16 y.o.",
+            "voltage": 43,
+            "age": 16,
+            "Distillery": {
+                "name": "Lagavulin",
+                "founded": 1816,
+                "Region": [
+                    {
+                        "name": "Islay"
+                    }
+                ]
+            }
+        },
+        "Transactions": [
+            {
+                "ammountMl": 200,
+                "price": 0,
+                "currency": "CZK",
+                "creationTime": "2020-12-31T23:57:00",
+                "customerID": 2
+            }
+        ],
+        "bottlePrice": 1159
+    },
+    {
+        "@context": {
+            "bottleID": "http://example.org/whiskeyman/BottleID",
+            "CustomerID": "http://example.org/whiskeyman/CustomerID",
+            "login": "http://example.org/whiskeyman/Login",
+            "Ownerships": "http://example.org/whiskeyman/Ownership",
+            "share": "http://example.org/whiskeyman/Share",
+            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
+            "Distillery": "http://example.org/whiskeyman/Distillery",
+            "founded": "http://example.org/whiskeyman/Founded",
+            "Region": "http://example.org/whiskeyman/Region",
+            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
+            "shotPrice": "http://example.org/whiskeyman/PriceForML",
+            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
+            "NfcTag": "http://example.org/whiskeyman/NfcTag",
+            "inStock": "http://example.org/whiskeyman/InStock",
+            "Transactions": "http://example.org/whiskeyman/Transaction",
+            "Described": "http://example.org/whiskeyman/DescribedBy",
+            "name": "http://schema.org/name",
+            "givenName": "http://schema.org/givenName",
+            "familyName": "http://schema.org/familyName",
+            "email": "http://schema.org/email",
+            "price": "http://schema.org/price",
+            "purchaseDate": "http://schema.org/purchaseDate",
+            "creationTime": "http://schema.org/purchaseDate",
+            "barcode": "http://schema.org/barcode",
+            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
+            "voltage": "https://vocab.org/whisky/terms/voltage",
+            "age": "https://vocab.org/whisky/terms/age"
+        },
+        "bottleID": 4,
+        "shotPrice": 90,
+        "currency": "CZK",
+        "inStock": true,
+        "barcode": "1235112",
+        "purchaseDate": "2020-02-20T20:20:20",
+        "Ownerships": [
+            {
+                "share": 50,
+                "customerID": 4
+            }
+        ],
+        "SpecialPrices": [
+            {
+                "price": 50,
+                "currency": "CZK",
+                "customerID": 1
+            }
+        ],
+        "Described": {
+            "name": "Redbreast 12 y.o.",
+            "voltage": 40,
+            "age": 12,
+            "Distillery": {
+                "name": "Redbreast",
+                "founded": 1903,
+                "Region": [
+                    {
+                        "name": "Ireland"
+                    }
+                ]
+            }
+        },
+        "Transactions": [
+            {
+                "ammountMl": 400,
+                "price": 120,
+                "currency": "CZK",
+                "creationTime": "2020-12-31T23:58:00",
+                "customerID": 2
+            }
+        ],
+        "bottlePrice": 1430
+    },
+    {
+        "@context": {
+            "bottleID": "http://example.org/whiskeyman/BottleID",
+            "CustomerID": "http://example.org/whiskeyman/CustomerID",
+            "login": "http://example.org/whiskeyman/Login",
+            "Ownerships": "http://example.org/whiskeyman/Ownership",
+            "share": "http://example.org/whiskeyman/Share",
+            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
+            "Distillery": "http://example.org/whiskeyman/Distillery",
+            "founded": "http://example.org/whiskeyman/Founded",
+            "Region": "http://example.org/whiskeyman/Region",
+            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
+            "shotPrice": "http://example.org/whiskeyman/PriceForML",
+            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
+            "NfcTag": "http://example.org/whiskeyman/NfcTag",
+            "inStock": "http://example.org/whiskeyman/InStock",
+            "Transactions": "http://example.org/whiskeyman/Transaction",
+            "Described": "http://example.org/whiskeyman/DescribedBy",
+            "name": "http://schema.org/name",
+            "givenName": "http://schema.org/givenName",
+            "familyName": "http://schema.org/familyName",
+            "email": "http://schema.org/email",
+            "price": "http://schema.org/price",
+            "purchaseDate": "http://schema.org/purchaseDate",
+            "creationTime": "http://schema.org/purchaseDate",
+            "barcode": "http://schema.org/barcode",
+            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
+            "voltage": "https://vocab.org/whisky/terms/voltage",
+            "age": "https://vocab.org/whisky/terms/age"
+        },
+        "bottleID": 5,
+        "shotPrice": 175,
+        "currency": "CZK",
+        "inStock": true,
+        "barcode": "7777777",
+        "purchaseDate": "2021-01-12T12:00:00",
+        "Ownerships": [],
+        "SpecialPrices": [],
+        "Described": {
+            "name": "Bowmore 18 y.o.",
+            "voltage": 43,
+            "age": 18,
+            "Distillery": {
+                "name": "Bowmore",
+                "founded": 1779,
+                "Region": [
+                    {
+                        "name": "Highland"
+                    },
+                    {
+                        "name": "Speyside"
+                    }
+                ]
+            }
+        },
+        "Transactions": [],
+        "bottlePrice": 1930
+    }
+]

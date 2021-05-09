@@ -1,0 +1,124 @@
+@prefix ns0: <http://example.org/whiskeyman/> .
+@prefix schema: <http://schema.org/> .
+@prefix ns1: <https://vocab.org/whisky/terms/> .
+@prefix ns2: <http://www.eurocris.org/ontologies/cerif/1.3/> .
+
+[]
+  ns0:BottleID 1 ;
+  ns0:DescribedBy [
+    ns0:Distillery [
+      ns0:Founded 1816 ;
+      ns0:Region [ schema:name "Islay" ] ;
+      schema:name "Lagavulin"
+    ] ;
+    schema:name "Lagavulin 16 y.o." ;
+    ns1:age 16 ;
+    ns1:voltage 43
+  ] ;
+  ns0:InStock false ;
+  ns0:PriceForBottle 1130 ;
+  ns0:PriceForML 69 ;
+  ns0:SpecialPrice [
+    schema:price 65 ;
+    ns2:currency "CZK"
+  ] ;
+  schema:barcode "1348690" ;
+  schema:purchaseDate "1999-09-01T00:00:00" ;
+  ns2:currency "CZK" .
+
+[]
+  ns0:BottleID 3 ;
+  ns0:DescribedBy [
+    ns0:Distillery [
+      ns0:Founded 1816 ;
+      ns0:Region [ schema:name "Islay" ] ;
+      schema:name "Lagavulin"
+    ] ;
+    schema:name "Lagavulin 16 y.o." ;
+    ns1:age 16 ;
+    ns1:voltage 43
+  ] ;
+  ns0:InStock true ;
+  ns0:Ownership [ ns0:Share 100 ] ;
+  ns0:PriceForBottle 1159 ;
+  ns0:PriceForML 76 ;
+  ns0:SpecialPrice [
+    schema:price 0 ;
+    ns2:currency "CZK"
+  ] ;
+  ns0:Transaction [
+    ns0:AmmountMl 200 ;
+    schema:price 0 ;
+    schema:purchaseDate "2020-12-31T23:57:00" ;
+    ns2:currency "CZK"
+  ] ;
+  schema:barcode "2345657" ;
+  schema:purchaseDate "2020-02-20T20:20:20" ;
+  ns2:currency "CZK" .
+
+[]
+  ns0:BottleID 4 ;
+  ns0:DescribedBy [
+    ns0:Distillery [
+      ns0:Founded 1903 ;
+      ns0:Region [ schema:name "Ireland" ] ;
+      schema:name "Redbreast"
+    ] ;
+    schema:name "Redbreast 12 y.o." ;
+    ns1:age 12 ;
+    ns1:voltage 40
+  ] ;
+  ns0:InStock true ;
+  ns0:Ownership [ ns0:Share 50 ] ;
+  ns0:PriceForBottle 1430 ;
+  ns0:PriceForML 90 ;
+  ns0:SpecialPrice [
+    schema:price 50 ;
+    ns2:currency "CZK"
+  ] ;
+  ns0:Transaction [
+    ns0:AmmountMl 400 ;
+    schema:price 120 ;
+    schema:purchaseDate "2020-12-31T23:58:00" ;
+    ns2:currency "CZK"
+  ] ;
+  schema:barcode "1235112" ;
+  schema:purchaseDate "2020-02-20T20:20:20" ;
+  ns2:currency "CZK" .
+
+[]
+  ns0:BottleID 5 ;
+  ns0:DescribedBy [
+    ns0:Distillery [
+      ns0:Founded 1779 ;
+      ns0:Region [ schema:name "Highland" ], [ schema:name "Speyside" ] ;
+      schema:name "Bowmore"
+    ] ;
+    schema:name "Bowmore 18 y.o." ;
+    ns1:age 18 ;
+    ns1:voltage 43
+  ] ;
+  ns0:InStock true ;
+  ns0:PriceForBottle 1930 ;
+  ns0:PriceForML 175 ;
+  schema:barcode "7777777" ;
+  schema:purchaseDate "2021-01-12T12:00:00" ;
+  ns2:currency "CZK" .
+
+[]
+  ns0:BottleID 2 ;
+  ns0:DescribedBy [
+    ns0:Distillery [
+      ns0:Founded 1843 ;
+      ns0:Region [ schema:name "Speyside" ] ;
+      schema:name "Glenmorangie"
+    ] ;
+    schema:name "Glenfiddich 15 y.o." ;
+    ns1:age 15 ;
+    ns1:voltage 40
+  ] ;
+  ns0:InStock true ;
+  ns0:PriceForBottle 978 ;
+  ns0:PriceForML [ ns2:currency "CZK" ] ;
+  schema:barcode "3454665" ;
+  schema:purchaseDate "1939-09-01T00:00:00" .

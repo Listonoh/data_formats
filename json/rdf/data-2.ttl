@@ -1,0 +1,86 @@
+@prefix ns0: <http://example.org/whiskeyman/> .
+@prefix schema: <http://schema.org/> .
+@prefix ns1: <http://www.eurocris.org/ontologies/cerif/1.3/> .
+
+[]
+  ns0:CustomerID 1 ;
+  ns0:Login "KutalejiciseKrava" ;
+  ns0:Ownership [
+    ns0:BottleID 4 ;
+    ns0:Share 50
+  ] ;
+  ns0:SpecialPrice [
+    ns0:BottleID 1 ;
+    schema:price 65 ;
+    ns1:currency "CZK"
+  ], [
+    ns0:BottleID 4 ;
+    schema:price 50 ;
+    ns1:currency "CZK"
+  ] ;
+  ns0:Transaction [
+    ns0:AmmountMl 1000 ;
+    ns0:BottleID 1 ;
+    schema:price 69000 ;
+    schema:purchaseDate "2021-01-12T12:00:00" ;
+    ns1:currency "CZK"
+  ] ;
+  schema:email "Stooped@hotmail.com" ;
+  schema:familyName "Brabec" ;
+  schema:givenName "Matyas" ;
+  schema:name "Matyas Brabec" .
+
+_:genid6
+  ns0:AmmountMl 200 ;
+  ns0:BottleID 3 ;
+  schema:price 0 ;
+  schema:purchaseDate "2020-12-31T23:58:00" ;
+  ns1:currency "CZK" .
+
+_:genid7
+  ns0:AmmountMl 400 ;
+  ns0:BottleID 4 ;
+  schema:price 120 ;
+  schema:purchaseDate "2020-12-31T23:58:00" ;
+  ns1:currency "CZK" .
+
+[]
+  ns0:CustomerID 3 ;
+  ns0:Login "TurboBurt" ;
+  ns0:NfcTag [ schema:purchaseDate "2012-04-20T23:58:00" ] ;
+  schema:email "TurboBurt@nitroParek.com" ;
+  schema:familyName "Mykiska" ;
+  schema:givenName "Vojtech" ;
+  schema:name "Vojtech Mikiska" .
+
+[]
+  ns0:CustomerID 4 ;
+  ns0:Login "LeeStack" ;
+  ns0:NfcTag [ schema:purchaseDate "2022-04-20T23:58:00" ] ;
+  ns0:Ownership [
+    ns0:BottleID 4 ;
+    ns0:Share 50
+  ] ;
+  schema:email "Listonoh@ddd.com" ;
+  schema:familyName "Stack" ;
+  schema:givenName "Lee" ;
+  schema:name "lee stack" .
+
+[]
+  ns0:CustomerID 2 ;
+  ns0:Login "TurboKraken" ;
+  ns0:NfcTag [ schema:purchaseDate "2020-06-09T23:58:00" ], [ schema:purchaseDate "2001-09-11T23:58:00" ] ;
+  ns0:Ownership [
+    ns0:BottleID 3 ;
+    ns0:Share 100
+  ] ;
+  ns0:SpecialPrice [
+    ns0:BottleID 3 ;
+    schema:price 0 ;
+    ns1:currency "CZK"
+  ] ;
+  ns0:Transaction _:genid6, _:genid7 ;
+  schema:email "HyperKraken@hotmail.com" ;
+  schema:familyName "Brecka" ;
+  schema:givenName "Vojtech" ;
+  schema:name "Vojtech Brecka" .

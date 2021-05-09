@@ -4,7 +4,6 @@
         "foaf": "<http: //xmlns.com/foaf/0.1/>",
         "whisky": "<https: //vocab.org/whisky/terms/>",
         "dcat": "<http: //www.w3.org/ns/dcat>",
-        "cis": "<http: //dati.beniculturali.it/cultural-ON/cultural-ON.owl> ",
         "xsd": "<http: //www.w3.org/2001/XMLSchema#>",
         "schema": "<http: //schema.org>",
         "rdfs": "<http: //www.w3.org/2000/01/rdf-schema#>",
@@ -19,61 +18,36 @@
     "type": "array",
     "minItems": 0,
     "definitions": {
-        "Price": {
+        "BottleDescription": {
             "type": "object",
-            "required": [
-                "value",
-                "currency"
-            ],
             "properties": {
-                "ex:value": {
-                    "type": "number",
-                    "minimum": 0
-                },
-                "cerif:currency": {
-                    "type": "string",
-                    "description": "Code of currency"
-                }
-            }
-        },
-        "ex:BottleDescription": {
-            "type": "object",
-            "required": [
-                "name",
-                "voltage"
-            ],
-            "properties": {
-                "schema:name": {
+                "name": {
                     "type": "string",
                     "description": "Name of the described bottle"
                 },
-                "whisky:age": {
+                "age": {
                     "type": "number"
                 },
-                "whisky:voltage": {
+                "voltage": {
                     "type": "number",
                     "minimum": 0,
                     "desription": "Alcohol by volume present in bottle"
                 },
-                "ex:Distillery": {
+                "Distillery": {
                     "$ref": "#/definitions/Distillery"
                 }
             }
         },
-        "ex:Distillery": {
+        "Distillery": {
             "type": "object",
-            "required": [
-                "name",
-                "founded"
-            ],
             "properties": {
-                "schema:name": {
+                "name": {
                     "type": "string"
                 },
-                "ex:founded": {
+                "ounded": {
                     "type": "number"
                 },
-                "ex:Region": {
+                "Region": {
                     "type": "array",
                     "minItems": 1,
                     "items": {
@@ -82,71 +56,60 @@
                 }
             }
         },
-        "ex:Region": {
+        "Region": {
             "type": "object",
-            "required": [
-                "name"
-            ],
             "properties": {
-                "schema:name": {
+                "name": {
                     "type": "string"
                 }
             }
         },
-        "ex:Transaction": {
+        "Transaction": {
             "type": "object",
-            "required": [
-                "ammountMl",
-                "price",
-                "creationTime",
-                "customerID"
-            ],
             "properties": {
-                "ex:ammountMl": {
+                "ammountMl": {
                     "type": "number",
                     "minimum": 0
                 },
-                "schema:price": {
-                    "$ref": "#/definitions/Price"
+                "price": {
+                    "type": "number"
                 },
-                "schema:creationTime": {
+                "currency": {
+                    "type": "string"
+                },
+                "creationTime": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "ex:customerID": {
+                "customerID": {
                     "type": "number"
                 }
             }
         },
-        "ex:SpecialPrice": {
+        "SpecialPrice": {
             "type": "object",
-            "required": [
-                "price",
-                "customerID"
-            ],
             "properties": {
-                "schema:price": {
-                    "$ref": "#/definitions/Price"
+                "price": {
+                    "type": "number"
                 },
-                "ex:customerID": {
+                "currency": {
+                    "type": "string"
+                },
+                "customerID": {
                     "type": "number"
                 }
             }
         },
         "Ownership": {
             "type": "object",
-            "required": [
-                "share",
-                "customerID"
-            ],
             "properties": {
-                "ex:share": {
+                "share": {
                     "type": "number",
                     "minimum": 0,
                     "maximum": 100,
                     "description": "percentage share of the bottle in question"
                 },
-                "ex:customerID": {
+                "customerID": {
                     "type": "number"
                 }
             }
@@ -156,60 +119,51 @@
         "type": "object",
         "title": "Bottle",
         "properties": {
-            "ex:bottleID": {
+            "bottleID": {
                 "type": "number"
             },
-            "ex:shotPrice": {
-                "$ref": "#/definitions/Price",
-                "description": "Price for one shot of size 20ml"
+            "shotPrice": {
+                "type": "number"
             },
-            "ex:bottlePrice": {
-                "$ref": "#/definitions/Price"
+            "currency": {
+                "type": "string"
             },
-            "ex:inStock": {
+            "bottlePrice": {
+                "type": "number"
+            },
+            "inStock": {
                 "type": "boolean",
                 "description": "Is bottle available for purchase"
             },
-            "schema:barcode": {
+            "barcode": {
                 "type": "string"
             },
-            "schema:purchaseDate": {
+            "purchaseDate": {
                 "type": "string",
                 "format": "date-time"
             },
-            "ex:Ownerships": {
+            "Ownerships": {
                 "type": "array",
                 "minItems": 0,
                 "items": {
                     "$ref": "#/definitions/Ownership"
                 }
             },
-            "ex:SpecialPrices": {
+            "SpecialPrices": {
                 "type": "array",
                 "items": {
                     "$ref": "#/definitions/SpecialPrice"
                 }
             },
-            "ex:Described": {
+            "Described": {
                 "$ref": "#/definitions/BottleDescription"
             },
-            "ex:Transactions": {
+            "Transactions": {
                 "type": "array",
                 "items": {
                     "$ref": "#/definitions/Transaction"
                 }
             }
-        },
-        "required": [
-            "bottleID",
-            "shotPrice",
-            "inStock",
-            "barcode",
-            "Ownerships",
-            "SpecialPrices",
-            "Described",
-            "Transactions",
-            "purchaseDate"
-        ]
+        }
     }
 }
