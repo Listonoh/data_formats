@@ -1,0 +1,1 @@
+[ .[] | select(.inStock) | .Described.Distillery.Region | .[].name ] | unique

@@ -1,0 +1,1 @@
+[ map(select((.Ownerships | length) > 0)) | .[].name ] | join(", ")
