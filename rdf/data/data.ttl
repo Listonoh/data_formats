@@ -46,9 +46,21 @@ ex:Owns rdf:type rdf:Property;
         rdfs:domain	ex:Customer;
         rdfs:range	ex:Ownership.
 
+ex:CSpecialPrice rdf:type rdf:Property;
+        rdfs:domain	ex:Customer;
+        rdfs:range	ex:SpecialPrice.
+
+ex:CNfcTag rdf:type rdf:Property;
+        rdfs:domain	ex:Customer;
+        rdfs:range	ex:NafcTag.
+
 ex:TransactionMadeBY rdf:type rdf:Property;
         rdfs:domain	ex:Transaction;
         rdfs:range	ex:Customer.
+
+ex:TransactionedBottle rdf:type rdf:Property;
+        rdfs:domain	ex:Transaction;
+        rdfs:range	ex:Bottle.
 
 ex:DescribedBy rdf:type rdf:Property;
         rdfs:domain	ex:Bottle;
@@ -74,6 +86,10 @@ ex:Share rdf:type rdf:Property ;
         rdfs:domain     ex:Ownership ;
         rdfs:range      schema:Number.
 
+ex:OwnedBottle rdf:type rdf:Property ;
+        rdfs:domain     ex:Ownership ;
+        rdfs:range      ex:Bottle.
+
 ex:BottleID rdf:type rdf:Property;
         rdfs:domain     ex:Bottle;
         rdfs:range      schema:Number.
@@ -81,6 +97,19 @@ ex:BottleID rdf:type rdf:Property;
 ex:CustomerID rdf:type rdf:Property;
         rdfs:domain     ex:Customer;
         rdfs:range      schema:Number.
+
+ex:DistilledAt rdf:type rdf:Property;
+        rdfs:domain     ex:Description;
+        rdfs:range      schema:Distillery.
+
+ex:RegionOf rdf:type rdf:Property;
+        rdfs:domain     ex:Distillery;
+        rdfs:range      schema:Region.
+
+ex:SPBottle rdf:type rdf:Property;
+        rdfs:domain     ex:SpecialPrice;
+        rdfs:range      schema:Bottle.
+
 
 #Region
 ex:islay     a    ex:Region ;
@@ -97,48 +126,48 @@ ex:ireland   a    ex:Region ;
 ex:laga      a    ex:Distillery;
         schema:name        "Lagavulin"@en ; 
         ex:Founded         1816 ;
-        ex:Region   ex:islay .
+        ex:RegionOf   ex:islay .
 
 ex:bowm      a    ex:Distillery ;
         schema:name    "Bowmore"@en ; 
         ex:Founded     1779 ;
-        ex:Region       ex:highland ,
+        ex:RegionOf       ex:highland ,
                         ex:speyside .
 
 ex:glen      a    ex:Distillery ;
         schema:name     "Glenmorangie"@en ; 
         ex:Founded      1843 ;
-        ex:Region       ex:speyside .
+        ex:RegionOf       ex:speyside .
 
 ex:redb      a    ex:Distillery ;  
         schema:name     "Redbreast"@en ; 
         ex:Founded      1903 ;
-        ex:Region       ex:ireland .
+        ex:RegionOf       ex:ireland .
 
 #BottleDescription
 ex:laga16  a    ex:Description ;
         schema:name     "Lagavulin 16 y.o." ;
         whisky:age      16  ;
         whisky:abv      43  ;
-        ex:Distillery   ex:laga .
+        ex:DistilledAt   ex:laga .
 
 ex:glen15  a    ex:Description ;
         schema:name     "Glenfiddich 15 y.o." ;
         whisky:age      15 ;
         whisky:abv      40 ;
-        ex:Distillery   ex:glen .
+        ex:DistilledAt   ex:glen .
 
 ex:bowm18  a    ex:Description ;
         schema:name     "Bowmore 18 y.o." ;
         whisky:age      18  ;
         whisky:abv      43  ;
-        ex:Distillery   ex:bowm .
+        ex:DistilledAt   ex:bowm .
 
 ex:redb12  a    ex:Description ;
         schema:name     "Redbreast 12 y.o." ;
         whisky:age      12  ;
         whisky:abv      40  ;
-        ex:Distillery   ex:redb .                 
+        ex:DistilledAt   ex:redb .                 
 
 #Bottle
 ex:matyseq_laga16    a       ex:Bottle  ;
@@ -193,7 +222,7 @@ ex:tr-00001            a       ex:Transaction ;
         schema:Price            0 ;
         cerif:currency          "CZK";
         schema:purchaseDate     "2020-12-31T23:57:00"^^xsd:dateTime ;
-        ex:Bottle               ex:fojtiseq_laga16 ;
+        ex:TransactionedBottle               ex:fojtiseq_laga16 ;
         ex:TransactionMadeBY    ex:fojtiseq .
 
 ex:tr-00002            a       ex:Transaction ;
@@ -201,7 +230,7 @@ ex:tr-00002            a       ex:Transaction ;
         schema:Price            120 ;
         cerif:currency          "CZK";
         schema:purchaseDate     "2020-12-31T23:58:00"^^xsd:dateTime ;
-        ex:Bottle               ex:honziq_redb12 ;
+        ex:TransactionedBottle               ex:honziq_redb12 ;
         ex:TransactionMadeBY    ex:fojtiseq .
 
 ex:tr-00003            a       ex:Transaction ;
@@ -209,37 +238,37 @@ ex:tr-00003            a       ex:Transaction ;
         schema:Price           69000 ;
         cerif:currency         "CZK";
         schema:purchaseDate    "2021-01-12T12:00:00"^^xsd:dateTime ;
-        ex:Bottle              ex:matyseq_laga16 ;
+        ex:TransactionedBottle              ex:matyseq_laga16 ;
         ex:TransactionMadeBY   ex:matisek .
 
 #Ownership
 ex:ow-10001            a        ex:Ownership ;
         ex:Share                100 ;
-        ex:Bottle               ex:fojtiseq_laga16 .
+        ex:OwnedBottle               ex:fojtiseq_laga16 .
 
 ex:ow-10002            a        ex:Ownership ;
         ex:Share                50 ;
-        ex:Bottle               ex:honziq_redb12  .
+        ex:OwnedBottle               ex:honziq_redb12  .
 
 ex:ow-10003            a        ex:Ownership ;
         ex:Share                50 ;
-        ex:Bottle               ex:honziq_redb12 .
+        ex:OwnedBottle               ex:honziq_redb12 .
 
 #SpecialPrice
 ex:matFor65             a       ex:SpecialPrice;
         cerif:currency          "CZK";
         ex:PriceForML           65 ;
-        ex:Bottle               ex:matyseq_laga16 .
+        ex:SPBottle               ex:matyseq_laga16 .
 
 ex:for00             a       ex:SpecialPrice;
         cerif:currency          "CZK";
         ex:PriceForML           0 ;
-        ex:Bottle               ex:fojtiseq_laga16 .
+        ex:SPBottle               ex:fojtiseq_laga16 .
 
 ex:matFor50             a       ex:SpecialPrice;
         cerif:currency          "CZK";
         ex:PriceForML           50 ;
-        ex:Bottle               ex:honziq_redb12 .
+        ex:SPBottle               ex:honziq_redb12 .
 
 
 #Customer
@@ -250,7 +279,7 @@ ex:matisek           a       ex:Customer ;
         schema:email            "Stooped@hotmail.com" ;
         ex:Login                "KutalejiciseKrava" ;
         ex:Owns                 ex:ow-10003 ;
-        ex:SpecialPrice         ex:matFor65 ,
+        ex:CSpecialPrice         ex:matFor65 ,
                                 ex:matFor50 .
 
 
@@ -262,8 +291,8 @@ ex:fojtiseq          a       ex:Customer ;
         schema:email            "HyperKraken@hotmail.com" ;
         ex:Login                "TurboKraken" ;
         ex:Owns                 ex:ow-10001 ;
-        ex:SpecialPrice         ex:for00 ;
-        ex:NfcTag               ex:testTag ,
+        ex:CSpecialPrice         ex:for00 ;
+        ex:CNfcTag               ex:testTag ,
                                 ex:fojtisequv .
 
 
@@ -273,7 +302,7 @@ ex:kulicka           a       ex:Customer ;
         schema:familyName       "Mykiska" ;
         schema:email            "TurboBurt@nitroParek.com" ;
         ex:Login                "TurboBurt" ;
-        ex:NfcTag               ex:kulickuv .
+        ex:CNfcTag               ex:kulickuv .
 
 ex:listecek          a       ex:Customer ;
         schema:name             "lee stack";
@@ -282,7 +311,7 @@ ex:listecek          a       ex:Customer ;
         schema:email            "Listonoh@ddd.com" ;
         ex:Login                "LeeStack" ;
         ex:Owns                 ex:ow-10002 ;
-        ex:NfcTag               ex:listSvobod .
+        ex:CNfcTag               ex:listSvobod .
 
 #Nfc tag
 ex:testTag            a         ex:NfcTag ;
