@@ -15,6 +15,7 @@
 
 # custom definitions
 ex:Customer rdfs:subClassOf schema:Person;
+    rdf:type rdfs:Class;
     rdfs:label "A class containing all informations about customer"@en.
 
 ex:Distillery rdf:type rdfs:Class.
