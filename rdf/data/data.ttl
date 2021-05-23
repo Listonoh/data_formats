@@ -287,16 +287,16 @@ ex:listecek          a       ex:Customer ;
 #Nfc tag
 ex:testTag            a         ex:NfcTag ;
                 schema:Text            "OXPR456ADS75" ;
-                schema:purchaseDate              "2020-06-09"^^xsd:date .
+                schema:purchaseDate              "2020-06-09T12:00:00"^^xsd:date .
 
 ex:fojtisequv         a         ex:NfcTag ;
                 schema:Text            "OXPC987ADS75" ;
-                schema:purchaseDate               "2001-09-11"^^xsd:date .
+                schema:purchaseDate               "2001-09-11T12:00:00"^^xsd:date .
 
 ex:kulickuv           a         ex:NfcTag ;
                 schema:Text            "OXPZ6940ADS75" ;
-                schema:purchaseDate               "2012-04-20"^^xsd:date .
+                schema:purchaseDate               "2012-04-20T12:00:00"^^xsd:date .
 
 ex:listSvobod           a         ex:NfcTag ;
                 schema:Text             "OXPZ5540ADS75" ;
-                schema:purchaseDate               "2022-04-20"^^xsd:date .
+                schema:purchaseDate               "2022-04-20T12:00:00"^^xsd:date .
