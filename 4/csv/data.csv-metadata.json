@@ -1,0 +1,544 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "TableGroup",
+    "@id": "https://example.org/whiskeyman/data.csv-metadata.json",
+    "dc:description": "Public contracts",
+    "tables": [
+        {
+            "@id": "https://example.org/whiskeyman/data-region.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-region.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "regionID",
+                        "titles": "regionID",
+                        "dc:description": "ID of region",
+                        "required": true,
+                        "datatype": "number",
+                        "propertyUrl": "dc:title"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Region name",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en",
+                        "propertyUrl": "http://schema.org/name"
+                    }
+                ],
+                "primaryKey": "regionID"
+            }
+        },
+        {
+            "@id": "https://example.org/whiskeyman/data-distillery.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-distillery.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "distilleryID",
+                        "titles": "distilleryID",
+                        "dc:description": "ID of distillery",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "regionID",
+                        "titles": "regionID",
+                        "dc:description": "Region ID",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Distillery name",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "founded",
+                        "titles": "founded",
+                        "dc:description": "Distillery founded on this date",
+                        "required": true,
+                        "datatype": "date"
+                    }
+                ],
+                "primaryKey": [
+                    "distilleryID"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "regionID",
+                        "reference": {
+                            "resource": "data-region.csv",
+                            "columnReference": "regionID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/whiskeyman/data-bottleDescription.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-bottleDescription.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "BottleDescriptionID",
+                        "titles": "BottleDescriptionID",
+                        "dc:description": "ID of bottle description",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "distilleryID",
+                        "titles": "distilleryID",
+                        "dc:description": "ID of destilery it was made in",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Destillery name",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "age",
+                        "titles": "age",
+                        "dc:description": "age of bottle",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "voltage",
+                        "titles": "voltage",
+                        "dc:description": "percent of alcohol in bottle",
+                        "required": true,
+                        "datatype": "number"
+                    }
+                ],
+                "primaryKey": "BottleDescriptionID",
+                "foreignKeys": [
+                    {
+                        "columnReference": "distilleryID",
+                        "reference": {
+                            "resource": "data-distillery.csv",
+                            "columnReference": "distilleryID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/whiskeyman/data-bottle.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-bottle.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "bottleID",
+                        "titles": "bottleID",
+                        "dc:description": "ID of bottle",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "shotPrice",
+                        "titles": "shotPrice",
+                        "dc:description": "price of the shot",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "inStock",
+                        "titles": "inStock",
+                        "dc:description": "describes if bottle is in stock",
+                        "required": true,
+                        "datatype": "boolean"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "bottlePrice",
+                        "titles": "bottlePrice",
+                        "dc:description": "price of the whole bottle",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "purchasedDate",
+                        "titles": "purchasedDate",
+                        "dc:description": "date when was the bottle purchased",
+                        "required": true,
+                        "datatype": "date"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "barcode",
+                        "titles": "barcode",
+                        "dc:description": "barcode of given bottle",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "bottleDescriptionID",
+                        "titles": "bottleDescriptionID",
+                        "dc:description": "ID of the description",
+                        "required": true,
+                        "datatype": "number"
+                    }
+                ],
+                "primaryKey": "bottleID",
+                "foreignKeys": [
+                    {
+                        "columnReference": "bottleDescriptionID",
+                        "reference": {
+                            "resource": "data-bottleDescription.csv",
+                            "columnReference": "bottleDescriptionID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/whiskeyman/data-transaction.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-transaction.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "transactionID",
+                        "titles": "transactionID",
+                        "dc:description": "ID of transaction",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "customerID",
+                        "titles": "customerID",
+                        "dc:description": "Foreign key of customer",
+                        "required": false,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "bottleID",
+                        "titles": "bottleID",
+                        "dc:description": "Foreign key of customer",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "ammountMl",
+                        "titles": "ammountMl",
+                        "dc:description": "Ammount of liquid in transaction in Ml",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "price",
+                        "titles": "price",
+                        "dc:description": "Price of transaction",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "creationTime",
+                        "titles": "creationTime",
+                        "dc:description": "Time of creation of this transaction",
+                        "required": true,
+                        "datatype": "date"
+                    }
+                ],
+                "primaryKey": "transactionID",
+                "foreignKeys": [
+                    {
+                        "columnReference": "customerID",
+                        "reference": {
+                            "resource": "data-customer.csv",
+                            "columnReference": "customerID"
+                        }
+                    },
+                    {
+                        "columnReference": "bottleID",
+                        "reference": {
+                            "resource": "data-bottle.csv",
+                            "columnReference": "bottleID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/whiskeyman/data-ownership.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-ownership.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "ownershipID",
+                        "titles": "ownershipID",
+                        "dc:description": "ID of ownership",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "share",
+                        "titles": "share",
+                        "dc:description": "percent of share of given bottle",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "customerID",
+                        "titles": "customerID",
+                        "dc:description": "id of customer",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "bottleID",
+                        "titles": "bottleID",
+                        "dc:description": "id of bottle",
+                        "required": true,
+                        "datatype": "number"
+                    }
+                ],
+                "primaryKey": "ownershipID",
+                "foreignKeys": [
+                    {
+                        "columnReference": "bottleID",
+                        "reference": {
+                            "resource": "data-bottle.csv",
+                            "columnReference": "bottleID"
+                        }
+                    },
+                    {
+                        "columnReference": "customerID",
+                        "reference": {
+                            "resource": "data-customer.csv",
+                            "columnReference": "customerID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/whiskeyman/data-specialPrice.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-specialPrice.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "specialPriceID",
+                        "titles": "specialPriceID",
+                        "dc:description": "ID of special price",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "customerID",
+                        "titles": "customerID",
+                        "dc:description": "id of customer",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "bottleID",
+                        "titles": "bottleID",
+                        "dc:description": "id of bottle",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "price",
+                        "titles": "price",
+                        "dc:description": "new special price",
+                        "required": true,
+                        "datatype": "number"
+                    }
+                ],
+                "primaryKey": "regionID",
+                "foreignKeys": [
+                    {
+                        "columnReference": "bottleID",
+                        "reference": {
+                            "resource": "data-bottle.csv",
+                            "columnReference": "bottleID"
+                        }
+                    },
+                    {
+                        "columnReference": "customerID",
+                        "reference": {
+                            "resource": "data-customer.csv",
+                            "columnReference": "customerID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/whiskeyman/data-customer.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-customer.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "customerID",
+                        "titles": "customerID",
+                        "dc:description": "ID of customer",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "NFCTag",
+                        "titles": "NFCTag",
+                        "dc:description": "ID of NFC",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Customers full name",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "givenName",
+                        "titles": "givenName",
+                        "dc:description": "Given Name",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "famliyName",
+                        "titles": "famliyName",
+                        "dc:description": "Family Name",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "email",
+                        "titles": "email",
+                        "dc:description": "Email of this customer",
+                        "required": false,
+                        "datatype": "string",
+                        "lang": "en"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "login",
+                        "titles": "login",
+                        "dc:description": "Login of this customer",
+                        "required": false,
+                        "datatype": "string",
+                        "lang": "en"
+                    }
+                ],
+                "primaryKey": "regionID",
+                "foreignKeys": [
+                    {
+                        "columnReference": "NFCTag",
+                        "reference": {
+                            "resource": "data-nfcTag.csv",
+                            "columnReference": "NFCTagID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/whiskeyman/data-nfcTag.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-nfcTag.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "NfcTagID",
+                        "titles": "NfcTagID",
+                        "dc:description": "ID of NfcTag",
+                        "required": true,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "code",
+                        "titles": "code",
+                        "dc:description": "code of nfc tag",
+                        "required": false,
+                        "datatype": "number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "creationTime",
+                        "titles": "creationTime",
+                        "dc:description": "Date when was nfc tag added",
+                        "required": true,
+                        "datatype": "date"
+                    }
+                ],
+                "primaryKey": "NfcTagID"
+            }
+        }
+    ]
+}
