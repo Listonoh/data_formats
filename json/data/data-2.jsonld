@@ -1,240 +1,186 @@
-[
-    {
-        "@context": {
-            "bottleID": "http://example.org/whiskeyman/BottleID",
-            "CustomerID": "http://example.org/whiskeyman/CustomerID",
-            "login": "http://example.org/whiskeyman/Login",
-            "Ownerships": "http://example.org/whiskeyman/Ownership",
-            "share": "http://example.org/whiskeyman/Share",
-            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
-            "Distillery": "http://example.org/whiskeyman/Distillery",
-            "founded": "http://example.org/whiskeyman/Founded",
-            "Region": "http://example.org/whiskeyman/Region",
-            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
-            "shotPrice": "http://example.org/whiskeyman/PriceForML",
-            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
-            "NfcTag": "http://example.org/whiskeyman/NfcTag",
-            "inStock": "http://example.org/whiskeyman/InStock",
-            "Transactions": "http://example.org/whiskeyman/Transaction",
-            "Described": "http://example.org/whiskeyman/DescribedBy",
-            "name": "http://schema.org/name",
-            "givenName": "http://schema.org/givenName",
-            "familyName": "http://schema.org/familyName",
-            "email": "http://schema.org/email",
-            "price": "http://schema.org/price",
-            "purchaseDate": "http://schema.org/purchaseDate",
-            "creationTime": "http://schema.org/purchaseDate",
-            "barcode": "http://schema.org/barcode",
-            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
-            "voltage": "https://vocab.org/whisky/terms/voltage",
-            "age": "https://vocab.org/whisky/terms/age"
+{
+    "@context": {
+        "ex": "http://example.org/whiskeyman/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "whisky": "https://vocab.org/whisky/terms/",
+        "dcat": "http://www.w3.org/ns/dcat/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "cerif": "http://www.eurocris.org/ontologies/cerif/1.3/",
+        "Region": {
+            "@id": "http://example.org/whiskeyman/Region",
+            "@container": "@language"
         },
-        "CustomerID": 1,
-        "name": "Matyas Brabec",
-        "givenName": "Matyas",
-        "familyName": "Brabec",
-        "email": "Stooped@hotmail.com",
-        "login": "KutalejiciseKrava",
-        "Ownerships": [
-            {
-                "share": 50,
-                "bottleID": 4
-            }
-        ],
-        "SpecialPrices": [
-            {
-                "price": 65,
-                "currency": "CZK",
-                "bottleID": 1
-            },
-            {
-                "price": 50,
-                "currency": "CZK",
-                "bottleID": 4
-            }
-        ],
-        "Transactions": [
-            {
-                "ammountMl": 1000,
-                "price": 69000,
-                "currency": "CZK",
-                "creationTime": "2021-01-12T12:00:00",
-                "bottleID": 1
-            }
-        ],
-        "NfcTag": []
+        "bottleID": "http://example.org/whiskeyman/BottleID",
+        "CustomerID": "http://example.org/whiskeyman/CustomerID",
+        "login": "http://example.org/whiskeyman/Login",
+        "Ownerships": "http://example.org/whiskeyman/Ownership",
+        "share": "http://example.org/whiskeyman/Share",
+        "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
+        "Distillery": "http://example.org/whiskeyman/Distillery",
+        "founded": "http://example.org/whiskeyman/Founded",
+        "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
+        "shotPrice": "http://example.org/whiskeyman/PriceForML",
+        "ammountMl": "http://example.org/whiskeyman/AmmountMl",
+        "NfcTag": "http://example.org/whiskeyman/NfcTag",
+        "inStock": "http://example.org/whiskeyman/InStock",
+        "Transactions": "http://example.org/whiskeyman/Transaction",
+        "Described": "http://example.org/whiskeyman/DescribedBy",
+        "name": {
+            "@id": "http://schema.org/name",
+            "@container": "@language"
+        },
+        "givenName": "http://schema.org/givenName",
+        "familyName": "http://schema.org/familyName",
+        "email": "http://schema.org/email",
+        "price": "http://schema.org/price",
+        "purchaseDate": "http://schema.org/purchaseDate",
+        "creationTime": "http://schema.org/purchaseDate",
+        "barcode": "http://schema.org/barcode",
+        "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
+        "voltage": "https://vocab.org/whisky/terms/voltage",
+        "age": "https://vocab.org/whisky/terms/age"
     },
-    {
-        "@context": {
-            "bottleID": "http://example.org/whiskeyman/BottleID",
-            "CustomerID": "http://example.org/whiskeyman/CustomerID",
-            "login": "http://example.org/whiskeyman/Login",
-            "Ownerships": "http://example.org/whiskeyman/Ownership",
-            "share": "http://example.org/whiskeyman/Share",
-            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
-            "Distillery": "http://example.org/whiskeyman/Distillery",
-            "founded": "http://example.org/whiskeyman/Founded",
-            "Region": "http://example.org/whiskeyman/Region",
-            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
-            "shotPrice": "http://example.org/whiskeyman/PriceForML",
-            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
-            "NfcTag": "http://example.org/whiskeyman/NfcTag",
-            "inStock": "http://example.org/whiskeyman/InStock",
-            "Transactions": "http://example.org/whiskeyman/Transaction",
-            "Described": "http://example.org/whiskeyman/DescribedBy",
-            "name": "http://schema.org/name",
-            "givenName": "http://schema.org/givenName",
-            "familyName": "http://schema.org/familyName",
-            "email": "http://schema.org/email",
-            "price": "http://schema.org/price",
-            "purchaseDate": "http://schema.org/purchaseDate",
-            "creationTime": "http://schema.org/purchaseDate",
-            "barcode": "http://schema.org/barcode",
-            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
-            "voltage": "https://vocab.org/whisky/terms/voltage",
-            "age": "https://vocab.org/whisky/terms/age"
-        },
-        "CustomerID": 2,
-        "name": "Vojtech Brecka",
-        "givenName": "Vojtech",
-        "familyName": "Brecka",
-        "email": "HyperKraken@hotmail.com",
-        "login": "TurboKraken",
-        "Ownerships": [
-            {
-                "share": 100,
-                "bottleID": 3
-            }
-        ],
-        "SpecialPrices": [
-            {
-                "price": 0,
-                "currency": "CZK",
-                "bottleID": 3
-            }
-        ],
-        "Transactions": [
-            {
-                "ammountMl": 200,
-                "price": 0,
-                "currency": "CZK",
-                "creationTime": "2020-12-31T23:58:00",
-                "bottleID": 3
+    "@graph": [
+        {
+            "@id": "ex:matisek",
+            "@type": "ex:Customer",
+            "CustomerID": 1,
+            "name": {
+                "en": "Matyas Brabec"
             },
-            {
-                "ammountMl": 400,
-                "price": 120,
-                "currency": "CZK",
-                "creationTime": "2020-12-31T23:58:00",
-                "bottleID": 4
-            }
-        ],
-        "NfcTag": [
-            {
-                "code": "OXPR456ADS75",
-                "creationTime": "2020-06-09T23:58:00"
+            "givenName": "Matyas",
+            "familyName": "Brabec",
+            "email": "Stooped@hotmail.com",
+            "login": "KutalejiciseKrava",
+            "Ownerships": [
+                {
+                    "share": 50,
+                    "bottleID": 4
+                }
+            ],
+            "SpecialPrices": [
+                {
+                    "price": 65,
+                    "currency": "CZK",
+                    "bottleID": 1
+                },
+                {
+                    "price": 50,
+                    "currency": "CZK",
+                    "bottleID": 4
+                }
+            ],
+            "Transactions": [
+                {
+                    "ammountMl": 1000,
+                    "price": 69000,
+                    "currency": "CZK",
+                    "creationTime": "2021-01-12T12:00:00",
+                    "bottleID": 1
+                }
+            ],
+            "NfcTag": []
+        },
+        {
+            "@id": "ex:fojtiseq",
+            "@type": "ex:Customer",
+            "CustomerID": 2,
+            "name": {
+                "en": "Vojtech Brecka"
             },
-            {
-                "code": "OXPC987ADS75",
-                "creationTime": "2001-09-11T23:58:00"
-            }
-        ]
-    },
-    {
-        "@context": {
-            "bottleID": "http://example.org/whiskeyman/BottleID",
-            "CustomerID": "http://example.org/whiskeyman/CustomerID",
-            "login": "http://example.org/whiskeyman/Login",
-            "Ownerships": "http://example.org/whiskeyman/Ownership",
-            "share": "http://example.org/whiskeyman/Share",
-            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
-            "Distillery": "http://example.org/whiskeyman/Distillery",
-            "founded": "http://example.org/whiskeyman/Founded",
-            "Region": "http://example.org/whiskeyman/Region",
-            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
-            "shotPrice": "http://example.org/whiskeyman/PriceForML",
-            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
-            "NfcTag": "http://example.org/whiskeyman/NfcTag",
-            "inStock": "http://example.org/whiskeyman/InStock",
-            "Transactions": "http://example.org/whiskeyman/Transaction",
-            "Described": "http://example.org/whiskeyman/DescribedBy",
-            "name": "http://schema.org/name",
-            "givenName": "http://schema.org/givenName",
-            "familyName": "http://schema.org/familyName",
-            "email": "http://schema.org/email",
-            "price": "http://schema.org/price",
-            "purchaseDate": "http://schema.org/purchaseDate",
-            "creationTime": "http://schema.org/purchaseDate",
-            "barcode": "http://schema.org/barcode",
-            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
-            "voltage": "https://vocab.org/whisky/terms/voltage",
-            "age": "https://vocab.org/whisky/terms/age"
+            "givenName": "Vojtech",
+            "familyName": "Brecka",
+            "email": "HyperKraken@hotmail.com",
+            "login": "TurboKraken",
+            "Ownerships": [
+                {
+                    "share": 100,
+                    "bottleID": 3
+                }
+            ],
+            "SpecialPrices": [
+                {
+                    "price": 0,
+                    "currency": "CZK",
+                    "bottleID": 3
+                }
+            ],
+            "Transactions": [
+                {
+                    "ammountMl": 200,
+                    "price": 0,
+                    "currency": "CZK",
+                    "creationTime": "2020-12-31T23:58:00",
+                    "bottleID": 3
+                },
+                {
+                    "ammountMl": 400,
+                    "price": 120,
+                    "currency": "CZK",
+                    "creationTime": "2020-12-31T23:58:00",
+                    "bottleID": 4
+                }
+            ],
+            "NfcTag": [
+                {
+                    "code": "OXPR456ADS75",
+                    "creationTime": "2020-06-09T23:58:00"
+                },
+                {
+                    "code": "OXPC987ADS75",
+                    "creationTime": "2001-09-11T23:58:00"
+                }
+            ]
         },
-        "CustomerID": 3,
-        "name": "Vojtech Mikiska",
-        "givenName": "Vojtech",
-        "familyName": "Mykiska",
-        "email": "TurboBurt@nitroParek.com",
-        "login": "TurboBurt",
-        "Ownerships": [],
-        "SpecialPrices": [],
-        "Transactions": [],
-        "NfcTag": [
-            {
-                "code": "OXPZ6940ADS75",
-                "creationTime": "2012-04-20T23:58:00"
-            }
-        ]
-    },
-    {
-        "@context": {
-            "bottleID": "http://example.org/whiskeyman/BottleID",
-            "CustomerID": "http://example.org/whiskeyman/CustomerID",
-            "login": "http://example.org/whiskeyman/Login",
-            "Ownerships": "http://example.org/whiskeyman/Ownership",
-            "share": "http://example.org/whiskeyman/Share",
-            "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
-            "Distillery": "http://example.org/whiskeyman/Distillery",
-            "founded": "http://example.org/whiskeyman/Founded",
-            "Region": "http://example.org/whiskeyman/Region",
-            "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
-            "shotPrice": "http://example.org/whiskeyman/PriceForML",
-            "ammountMl": "http://example.org/whiskeyman/AmmountMl",
-            "NfcTag": "http://example.org/whiskeyman/NfcTag",
-            "inStock": "http://example.org/whiskeyman/InStock",
-            "Transactions": "http://example.org/whiskeyman/Transaction",
-            "Described": "http://example.org/whiskeyman/DescribedBy",
-            "name": "http://schema.org/name",
-            "givenName": "http://schema.org/givenName",
-            "familyName": "http://schema.org/familyName",
-            "email": "http://schema.org/email",
-            "price": "http://schema.org/price",
-            "purchaseDate": "http://schema.org/purchaseDate",
-            "creationTime": "http://schema.org/purchaseDate",
-            "barcode": "http://schema.org/barcode",
-            "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
-            "voltage": "https://vocab.org/whisky/terms/voltage",
-            "age": "https://vocab.org/whisky/terms/age"
+        {
+            "@id": "ex:kulicka",
+            "@type": "ex:Customer",
+            "CustomerID": 3,
+            "name": {
+                "en": "Vojtech Mikiska"
+            },
+            "givenName": "Vojtech",
+            "familyName": "Mykiska",
+            "email": "TurboBurt@nitroParek.com",
+            "login": "TurboBurt",
+            "Ownerships": [],
+            "SpecialPrices": [],
+            "Transactions": [],
+            "NfcTag": [
+                {
+                    "code": "OXPZ6940ADS75",
+                    "creationTime": "2012-04-20T23:58:00"
+                }
+            ]
         },
-        "CustomerID": 4,
-        "name": "lee stack",
-        "givenName": "Lee",
-        "familyName": "Stack",
-        "email": "Listonoh@ddd.com",
-        "login": "LeeStack",
-        "Ownerships": [
-            {
-                "share": 50,
-                "bottleID": 4
-            }
-        ],
-        "SpecialPrices": [],
-        "Transactions": [],
-        "NfcTag": [
-            {
-                "code": "OXPZ5540ADS75",
-                "creationTime": "2022-04-20T23:58:00"
-            }
-        ]
-    }
-]
+        {
+            "@id": "ex:listecek",
+            "@type": "ex:Customer",
+            "CustomerID": 4,
+            "name": {
+                "en": "lee stack"
+            },
+            "givenName": "Lee",
+            "familyName": "Stack",
+            "email": "Listonoh@ddd.com",
+            "login": "LeeStack",
+            "Ownerships": [
+                {
+                    "share": 50,
+                    "bottleID": 4
+                }
+            ],
+            "SpecialPrices": [],
+            "Transactions": [],
+            "NfcTag": [
+                {
+                    "code": "OXPZ5540ADS75",
+                    "creationTime": "2022-04-20T23:58:00"
+                }
+            ]
+        }
+    ]
+}
