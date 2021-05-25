@@ -103,14 +103,14 @@
             "@id": "https://example.org/whiskeyman/data-bottleDescription.csv-metadata.json",
             "@type": "Table",
             "url": "data-bottleDescription.csv",
-            "aboutUrl": "http://example.org/whiskeyman/Description/{BottleDescriptionID}",
+            "aboutUrl": "http://example.org/whiskeyman/Description/{bottleDescriptionID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
-                        "name": "bottleDesriptionID",
-                        "titles": "bottleDesriptionID",
+                        "name": "bottleDescriptionID",
+                        "titles": "bottleDescriptionID",
                         "dc:description": "ID of bottle description",
                         "required": true,
                         "datatype": "number",
@@ -155,7 +155,7 @@
                         "propertyUrl": "whisky:abv"
                     }
                 ],
-                "primaryKey": "BottleDescriptionID",
+                "primaryKey": "bottleDescriptionID",
                 "foreignKeys": [
                     {
                         "columnReference": "distilleryID",
