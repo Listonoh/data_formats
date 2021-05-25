@@ -1,5 +1,5 @@
 bottleDesriptionID,distilleryID,name,age,voltage
-1,1,Lagavulin 16 y.o.,16,43
-2,3,Glenfiddich 15 y.o.,15,40
-3,2,Bowmore 18 y.o.,18,43
-4,4,Redbreast 12 y.o.,12,40
+1,1,"Lagavulin 16 y.o.",16,43
+2,3,"Glenfiddich 15 y.o.",15,40
+3,2,"Bowmore 18 y.o.",18,43
+4,4,"Redbreast 12 y.o.",12,40

@@ -13,6 +13,7 @@
             "@id": "https://example.org/whiskeyman/data-region.csv-metadata.json",
             "@type": "Table",
             "url": "data-region.csv",
+            "aboutUrl": "http://example.org/whiskeyman/Region/{regionID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
@@ -22,8 +23,7 @@
                         "titles": "regionID",
                         "dc:description": "ID of region",
                         "required": true,
-                        "datatype": "number",
-                        "propertyUrl": "dc:title"
+                        "datatype": "number"
                     },
                     {
                         "@type": "Column",
@@ -33,7 +33,7 @@
                         "required": true,
                         "datatype": "string",
                         "lang": "en",
-                        "propertyUrl": "http://schema.org/name"
+                        "propertyUrl": "schema:name"
                     }
                 ],
                 "primaryKey": "regionID"
@@ -43,6 +43,7 @@
             "@id": "https://example.org/whiskeyman/data-distillery.csv-metadata.json",
             "@type": "Table",
             "url": "data-distillery.csv",
+            "aboutUrl": "http://example.org/whiskeyman/Distillery/{distilleryID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
@@ -60,7 +61,9 @@
                         "titles": "regionID",
                         "dc:description": "Region ID",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:RegionOf",
+                        "valueUrl": "http://example.org/whiskeyman/Region/{regionID}"
                     },
                     {
                         "@type": "Column",
@@ -69,7 +72,8 @@
                         "dc:description": "Distillery name",
                         "required": true,
                         "datatype": "string",
-                        "lang": "en"
+                        "lang": "en",
+                        "propertyUrl": "schema:name"
                     },
                     {
                         "@type": "Column",
@@ -77,7 +81,8 @@
                         "titles": "founded",
                         "dc:description": "Distillery founded on this date",
                         "required": true,
-                        "datatype": "date"
+                        "datatype": "numeric",
+                        "propertyUrl": "ex:Founded"
                     }
                 ],
                 "primaryKey": [
@@ -98,16 +103,18 @@
             "@id": "https://example.org/whiskeyman/data-bottleDescription.csv-metadata.json",
             "@type": "Table",
             "url": "data-bottleDescription.csv",
+            "aboutUrl": "http://example.org/whiskeyman/Description/{BottleDescriptionID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
                     {
                         "@type": "Column",
-                        "name": "BottleDescriptionID",
-                        "titles": "BottleDescriptionID",
+                        "name": "bottleDesriptionID",
+                        "titles": "bottleDesriptionID",
                         "dc:description": "ID of bottle description",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:Description"
                     },
                     {
                         "@type": "Column",
@@ -115,7 +122,9 @@
                         "titles": "distilleryID",
                         "dc:description": "ID of destilery it was made in",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:DistilledAt",
+                        "valueUrl": "http://example.org/whiskeyman/Distillery/{distilleryID}"
                     },
                     {
                         "@type": "Column",
@@ -124,7 +133,8 @@
                         "dc:description": "Destillery name",
                         "required": true,
                         "datatype": "string",
-                        "lang": "en"
+                        "lang": "en",
+                        "propertyUrl": "schema:name"
                     },
                     {
                         "@type": "Column",
@@ -132,7 +142,8 @@
                         "titles": "age",
                         "dc:description": "age of bottle",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "whisky:age"
                     },
                     {
                         "@type": "Column",
@@ -140,7 +151,8 @@
                         "titles": "voltage",
                         "dc:description": "percent of alcohol in bottle",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "whisky:abv"
                     }
                 ],
                 "primaryKey": "BottleDescriptionID",
@@ -159,6 +171,7 @@
             "@id": "https://example.org/whiskeyman/data-bottle.csv-metadata.json",
             "@type": "Table",
             "url": "data-bottle.csv",
+            "aboutUrl": "http://example.org/whiskeyman/Bottle/{bottleID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
@@ -176,7 +189,8 @@
                         "titles": "shotPrice",
                         "dc:description": "price of the shot",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:PriceForML"
                     },
                     {
                         "@type": "Column",
@@ -184,7 +198,8 @@
                         "titles": "inStock",
                         "dc:description": "describes if bottle is in stock",
                         "required": true,
-                        "datatype": "boolean"
+                        "datatype": "boolean",
+                        "propertyUrl": "ex:InStock"
                     },
                     {
                         "@type": "Column",
@@ -192,7 +207,8 @@
                         "titles": "bottlePrice",
                         "dc:description": "price of the whole bottle",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:PriceForBottle"
                     },
                     {
                         "@type": "Column",
@@ -200,7 +216,8 @@
                         "titles": "purchasedDate",
                         "dc:description": "date when was the bottle purchased",
                         "required": true,
-                        "datatype": "date"
+                        "datatype": "datetime",
+                        "propertyUrl": "schema:purchaseDate"
                     },
                     {
                         "@type": "Column",
@@ -208,7 +225,8 @@
                         "titles": "barcode",
                         "dc:description": "barcode of given bottle",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "schema:barcode"
                     },
                     {
                         "@type": "Column",
@@ -216,7 +234,9 @@
                         "titles": "bottleDescriptionID",
                         "dc:description": "ID of the description",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:DescribedBy",
+                        "valueUrl": "http://example.org/whiskeyman/Description/{bottleDescriptionID}"
                     }
                 ],
                 "primaryKey": "bottleID",
@@ -235,6 +255,7 @@
             "@id": "https://example.org/whiskeyman/data-transaction.csv-metadata.json",
             "@type": "Table",
             "url": "data-transaction.csv",
+            "aboutUrl": "http://example.org/whiskeyman/Transaction/{transactionID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
@@ -252,7 +273,9 @@
                         "titles": "customerID",
                         "dc:description": "Foreign key of customer",
                         "required": false,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:TransactionMadeBY",
+                        "valueUrl": "http://example.org/whiskeyman/Customer/{customerID}"
                     },
                     {
                         "@type": "Column",
@@ -260,7 +283,9 @@
                         "titles": "bottleID",
                         "dc:description": "Foreign key of customer",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:TransactionedBottle",
+                        "valueUrl": "http://example.org/whiskeyman/Bottle/{bottleID}"
                     },
                     {
                         "@type": "Column",
@@ -268,7 +293,8 @@
                         "titles": "ammountMl",
                         "dc:description": "Ammount of liquid in transaction in Ml",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:AmmountMl"
                     },
                     {
                         "@type": "Column",
@@ -276,7 +302,8 @@
                         "titles": "price",
                         "dc:description": "Price of transaction",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "schema:Price"
                     },
                     {
                         "@type": "Column",
@@ -284,7 +311,8 @@
                         "titles": "creationTime",
                         "dc:description": "Time of creation of this transaction",
                         "required": true,
-                        "datatype": "date"
+                        "datatype": "datetime",
+                        "propertyUrl": "schema:purchaseDate"
                     }
                 ],
                 "primaryKey": "transactionID",
@@ -310,24 +338,27 @@
             "@id": "https://example.org/whiskeyman/data-ownership.csv-metadata.json",
             "@type": "Table",
             "url": "data-ownership.csv",
+            "aboutUrl": "http://example.org/whiskeyman/Ownership/{ownershipID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
-                    {
-                        "@type": "Column",
-                        "name": "ownershipID",
-                        "titles": "ownershipID",
-                        "dc:description": "ID of ownership",
-                        "required": true,
-                        "datatype": "number"
-                    },
                     {
                         "@type": "Column",
                         "name": "share",
                         "titles": "share",
                         "dc:description": "percent of share of given bottle",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:Share"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "ownershipID",
+                        "titles": "ownershipID",
+                        "dc:description": "ID of ownership",
+                        "required": true,
+                        "datatype": "number",
+                        "propertyUrl": "ex:Ownership"
                     },
                     {
                         "@type": "Column",
@@ -335,7 +366,9 @@
                         "titles": "customerID",
                         "dc:description": "id of customer",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:Customer",
+                        "valueUrl": "http://example.org/whiskeyman/Customer/{customerID}"
                     },
                     {
                         "@type": "Column",
@@ -343,7 +376,9 @@
                         "titles": "bottleID",
                         "dc:description": "id of bottle",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:OwnedBottle",
+                        "valueUrl": "http://example.org/whiskeyman/Bottle/{bottleID}"
                     }
                 ],
                 "primaryKey": "ownershipID",
@@ -369,6 +404,7 @@
             "@id": "https://example.org/whiskeyman/data-specialPrice.csv-metadata.json",
             "@type": "Table",
             "url": "data-specialPrice.csv",
+            "aboutUrl": "http://example.org/whiskeyman/SpecialPrice/{specialPriceID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
@@ -386,7 +422,9 @@
                         "titles": "customerID",
                         "dc:description": "id of customer",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:Customer",
+                        "valueUrl": "http://example.org/whiskeyman/Customer/{customerID}"
                     },
                     {
                         "@type": "Column",
@@ -394,7 +432,9 @@
                         "titles": "bottleID",
                         "dc:description": "id of bottle",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:SPBottle ",
+                        "valueUrl": "http://example.org/whiskeyman/Bottle/{bottleID}"
                     },
                     {
                         "@type": "Column",
@@ -402,10 +442,11 @@
                         "titles": "price",
                         "dc:description": "new special price",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:PriceForML"
                     }
                 ],
-                "primaryKey": "regionID",
+                "primaryKey": "specialPriceID",
                 "foreignKeys": [
                     {
                         "columnReference": "bottleID",
@@ -425,9 +466,48 @@
             }
         },
         {
+            "@id": "https://example.org/whiskeyman/data-nfcTag.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-nfcTag.csv",
+            "aboutUrl": "http://example.org/whiskeyman/nfcTag/{nfcTagID}",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "code",
+                        "titles": "code",
+                        "dc:description": "code of nfc tag",
+                        "required": false,
+                        "datatype": "string",
+                        "propertyUrl": "schema:Text"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "creationTime",
+                        "titles": "creationTime",
+                        "dc:description": "Date when was nfc tag added",
+                        "required": true,
+                        "datatype": "datetime",
+                        "propertyUrl": "schema:purchaseDate"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "nfcTagID",
+                        "titles": "nfcTagID",
+                        "dc:description": "ID of NfcTag",
+                        "required": true,
+                        "datatype": "number"
+                    }
+                ],
+                "primaryKey": "nfcTagID"
+            }
+        },
+        {
             "@id": "https://example.org/whiskeyman/data-customer.csv-metadata.json",
             "@type": "Table",
             "url": "data-customer.csv",
+            "aboutUrl": "http://example.org/whiskeyman/Customer/{customerID}",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
@@ -441,11 +521,13 @@
                     },
                     {
                         "@type": "Column",
-                        "name": "NFCTag",
-                        "titles": "NFCTag",
-                        "dc:description": "ID of NFC",
+                        "name": "nfcTagID",
+                        "titles": "nfcTagID",
+                        "dc:description": "ID of NFC tag",
                         "required": true,
-                        "datatype": "number"
+                        "datatype": "number",
+                        "propertyUrl": "ex:NfcTag",
+                        "valueUrl": "http://example.org/whiskeyman/nfcTag/{nfcTagID}"
                     },
                     {
                         "@type": "Column",
@@ -454,7 +536,8 @@
                         "dc:description": "Customers full name",
                         "required": true,
                         "datatype": "string",
-                        "lang": "en"
+                        "lang": "en",
+                        "propertyUrl": "schema:name"
                     },
                     {
                         "@type": "Column",
@@ -463,16 +546,18 @@
                         "dc:description": "Given Name",
                         "required": true,
                         "datatype": "string",
-                        "lang": "en"
+                        "lang": "en",
+                        "propertyUrl": "schema:givenName"
                     },
                     {
                         "@type": "Column",
-                        "name": "famliyName",
-                        "titles": "famliyName",
+                        "name": "familyName",
+                        "titles": "familyName",
                         "dc:description": "Family Name",
                         "required": true,
                         "datatype": "string",
-                        "lang": "en"
+                        "lang": "en",
+                        "propertyUrl": "schema:familyName"
                     },
                     {
                         "@type": "Column",
@@ -481,7 +566,8 @@
                         "dc:description": "Email of this customer",
                         "required": false,
                         "datatype": "string",
-                        "lang": "en"
+                        "lang": "en",
+                        "propertyUrl": "schema:email"
                     },
                     {
                         "@type": "Column",
@@ -490,54 +576,20 @@
                         "dc:description": "Login of this customer",
                         "required": false,
                         "datatype": "string",
-                        "lang": "en"
+                        "lang": "en",
+                        "propertyUrl": "ex:Login"
                     }
                 ],
-                "primaryKey": "regionID",
+                "primaryKey": "customerID",
                 "foreignKeys": [
                     {
-                        "columnReference": "NFCTag",
+                        "columnReference": "nfcTagID",
                         "reference": {
                             "resource": "data-nfcTag.csv",
-                            "columnReference": "NFCTagID"
+                            "columnReference": "nfcTagID"
                         }
                     }
                 ]
-            }
-        },
-        {
-            "@id": "https://example.org/whiskeyman/data-nfcTag.csv-metadata.json",
-            "@type": "Table",
-            "url": "data-nfcTag.csv",
-            "tableSchema": {
-                "@type": "Schema",
-                "columns": [
-                    {
-                        "@type": "Column",
-                        "name": "NfcTagID",
-                        "titles": "NfcTagID",
-                        "dc:description": "ID of NfcTag",
-                        "required": true,
-                        "datatype": "number"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "code",
-                        "titles": "code",
-                        "dc:description": "code of nfc tag",
-                        "required": false,
-                        "datatype": "number"
-                    },
-                    {
-                        "@type": "Column",
-                        "name": "creationTime",
-                        "titles": "creationTime",
-                        "dc:description": "Date when was nfc tag added",
-                        "required": true,
-                        "datatype": "date"
-                    }
-                ],
-                "primaryKey": "NfcTagID"
             }
         }
     ]
