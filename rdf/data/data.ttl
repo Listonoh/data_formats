@@ -124,12 +124,12 @@ ex:ireland   a    ex:Region ;
 #Distillery
 
 ex:laga      a    ex:Distillery;
-        schema:name        "Lagavulin"@en ; 
+        schema:name        "Lagavulin"@en ;
         ex:Founded         1816 ;
         ex:RegionOf   ex:islay .
 
 ex:bowm      a    ex:Distillery ;
-        schema:name    "Bowmore"@en ; 
+        schema:name    "Bowmore"@en ;
         ex:Founded     1779 ;
         ex:RegionOf       ex:highland ,
                         ex:speyside .

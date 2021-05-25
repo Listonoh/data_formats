@@ -1,0 +1,474 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix ns0: <ex:> .
+@prefix ns1: <file://root/src/data_formats/4/csv/data-transaction.csv#> .
+@prefix ns2: <file://root/src/data_formats/4/csv/data-bottle.csv#> .
+@prefix ns3: <file://root/src/data_formats/4/csv/data-distillery.csv#> .
+@prefix ns4: <file://root/src/data_formats/4/csv/data-region.csv#> .
+@prefix ns5: <whisky:> .
+@prefix ns6: <file://root/src/data_formats/4/csv/data-customer.csv#> .
+@prefix ns7: <file://root/src/data_formats/4/csv/data-specialPrice.csv#> .
+@prefix ns8: <file://root/src/data_formats/4/csv/data-nfcTag.csv#> .
+
+<https://example.org/whiskeyman/data.csv-metadata.json>
+  dc:description "Public contracts"@en ;
+  csvw:table <https://example.org/whiskeyman/data-specialPrice.csv-metadata.json>, <https://example.org/whiskeyman/data-bottle.csv-metadata.json>, <https://example.org/whiskeyman/data-nfcTag.csv-metadata.json>, <https://example.org/whiskeyman/data-ownership.csv-metadata.json>, <https://example.org/whiskeyman/data-distillery.csv-metadata.json>, <https://example.org/whiskeyman/data-bottleDescription.csv-metadata.json>, <https://example.org/whiskeyman/data-transaction.csv-metadata.json>, <https://example.org/whiskeyman/data-region.csv-metadata.json>, <https://example.org/whiskeyman/data-customer.csv-metadata.json> ;
+  a csvw:TableGroup ;
+  prov:wasGeneratedBy [
+    prov:qualifiedUsage [
+      prov:hadRole csvw:csvEncodedTabularData ;
+      a prov:Usage ;
+      prov:entity <file://root/src/data_formats/4/csv/data-transaction.csv>, <file://root/src/data_formats/4/csv/data-nfcTag.csv>, <file://root/src/data_formats/4/csv/data-specialPrice.csv>, <file://root/src/data_formats/4/csv/data-bottle.csv>, <file://root/src/data_formats/4/csv/data-bottleDescription.csv>, <file://root/src/data_formats/4/csv/data-ownership.csv>, <file://root/src/data_formats/4/csv/data-region.csv>, <file://root/src/data_formats/4/csv/data-customer.csv>, <file://root/src/data_formats/4/csv/data-distillery.csv>
+    ], [
+      prov:hadRole csvw:tabularMetadata ;
+      a prov:Usage ;
+      prov:entity <file://root/src/data_formats/4/csv/data.csv-metadata.json>
+    ] ;
+    prov:wasAssociatedWith <https://rubygems.org/gems/rdf-tabular> ;
+    prov:startedAtTime "2021-05-25T20:59:05.057+02:00"^^xsd:dateTime ;
+    a prov:Activity ;
+    prov:endedAtTime "2021-05-25T20:59:05.599+02:00"^^xsd:dateTime
+  ] .
+
+<http://example.org/whiskeyman/Transaction/2>
+  schema:Price 1.200000e+2 ;
+  ns0:TransactionedBottle <http://example.org/whiskeyman/Bottle/3> ;
+  ns0:AmmountMl 4.000000e+2 ;
+  ns1:transactionID 2.000000e+0 ;
+  schema:purchaseDate "2020-12-31T23:58:00"^^xsd:dateTime ;
+  ns0:TransactionMadeBY <http://example.org/whiskeyman/Customer/2> .
+
+<http://example.org/whiskeyman/Bottle/3>
+  ns0:InStock true ;
+  schema:barcode 2.345657e+6 ;
+  schema:purchaseDate "2020-02-20T20:20:20"^^xsd:dateTime ;
+  ns0:PriceForML 7.600000e+1 ;
+  ns2:bottleID 3.000000e+0 ;
+  ns0:PriceForBottle 1.159000e+3 ;
+  ns0:DescribedBy <http://example.org/whiskeyman/Description/1> .
+
+<http://example.org/whiskeyman/Distillery/1>
+  schema:name "Lagavulin"@en ;
+  ns0:Founded "1816" ;
+  ns3:distilleryID 1.000000e+0 ;
+  ns0:RegionOf <http://example.org/whiskeyman/Region/1> .
+
+<http://example.org/whiskeyman/Distillery/3>
+  schema:name "Glenmorangie"@en ;
+  ns0:Founded "1843" ;
+  ns3:distilleryID 3.000000e+0 ;
+  ns0:RegionOf <http://example.org/whiskeyman/Region/3> .
+
+<https://example.org/whiskeyman/data-ownership.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/Ownership/1> ;
+    a csvw:Row ;
+    csvw:url <file://root/src/data_formats/4/csv/data-ownership.csv#row=2> ;
+    csvw:rownum 1
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Ownership/3> ;
+    a csvw:Row ;
+    csvw:url <file://root/src/data_formats/4/csv/data-ownership.csv#row=4> ;
+    csvw:rownum 3
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Ownership/2> ;
+    a csvw:Row ;
+    csvw:url <file://root/src/data_formats/4/csv/data-ownership.csv#row=3> ;
+    csvw:rownum 2
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-ownership.csv> .
+
+<http://example.org/whiskeyman/Region/3>
+  schema:name "Speyside"@en ;
+  ns4:regionID 3.000000e+0 .
+
+<http://example.org/whiskeyman/Bottle/5>
+  ns0:InStock true ;
+  schema:barcode 7.777777e+6 ;
+  schema:purchaseDate "2021-01-12T12:00:00"^^xsd:dateTime ;
+  ns0:PriceForML 1.750000e+2 ;
+  ns2:bottleID 5.000000e+0 ;
+  ns0:PriceForBottle 1.930000e+3 ;
+  ns0:DescribedBy <http://example.org/whiskeyman/Description/3> .
+
+<http://example.org/whiskeyman/Description/1>
+  schema:name "Lagavulin 16 y.o."@en ;
+  ns5:age 1.600000e+1 ;
+  ns0:Description 1.000000e+0 ;
+  ns5:abv 4.300000e+1 ;
+  ns0:DistilledAt <http://example.org/whiskeyman/Distillery/1> .
+
+<http://example.org/whiskeyman/Region/2>
+  schema:name "Highland"@en ;
+  ns4:regionID 2.000000e+0 .
+
+<http://example.org/whiskeyman/Bottle/4>
+  ns0:InStock true ;
+  schema:barcode 1.235112e+6 ;
+  schema:purchaseDate "2020-02-20T20:20:20"^^xsd:dateTime ;
+  ns0:PriceForML 9.000000e+1 ;
+  ns2:bottleID 4.000000e+0 ;
+  ns0:PriceForBottle 1.430000e+3 ;
+  ns0:DescribedBy <http://example.org/whiskeyman/Description/4> .
+
+<https://example.org/whiskeyman/data-distillery.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/Distillery/3> ;
+    a csvw:Row ;
+    csvw:url ns3:row=4 ;
+    csvw:rownum 3
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Distillery/2> ;
+    a csvw:Row ;
+    csvw:url ns3:row=3 ;
+    csvw:rownum 2
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Distillery/1> ;
+    a csvw:Row ;
+    csvw:url ns3:row=2 ;
+    csvw:rownum 1
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Distillery/4> ;
+    a csvw:Row ;
+    csvw:url ns3:row=5 ;
+    csvw:rownum 4
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-distillery.csv> .
+
+<https://example.org/whiskeyman/data-transaction.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/Transaction/2> ;
+    a csvw:Row ;
+    csvw:url ns1:row=3 ;
+    csvw:rownum 2
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Transaction/1> ;
+    a csvw:Row ;
+    csvw:url ns1:row=2 ;
+    csvw:rownum 1
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Transaction/3> ;
+    a csvw:Row ;
+    csvw:url ns1:row=4 ;
+    csvw:rownum 3
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-transaction.csv> .
+
+<https://example.org/whiskeyman/data-region.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/Region/1> ;
+    a csvw:Row ;
+    csvw:url ns4:row=2 ;
+    csvw:rownum 1
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Region/3> ;
+    a csvw:Row ;
+    csvw:url ns4:row=4 ;
+    csvw:rownum 3
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Region/2> ;
+    a csvw:Row ;
+    csvw:url ns4:row=3 ;
+    csvw:rownum 2
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Region/4> ;
+    a csvw:Row ;
+    csvw:url ns4:row=5 ;
+    csvw:rownum 4
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-region.csv> .
+
+<http://example.org/whiskeyman/Distillery/2>
+  schema:name "Bowmore"@en ;
+  ns0:Founded "1779" ;
+  ns3:distilleryID 2.000000e+0 ;
+  ns0:RegionOf <http://example.org/whiskeyman/Region/23> .
+
+<http://example.org/whiskeyman/Region/1>
+  schema:name "Islay"@en ;
+  ns4:regionID 1.000000e+0 .
+
+<http://example.org/whiskeyman/Customer/4>
+  schema:name "lee stack"@en ;
+  ns0:Login "LeeStack"@en ;
+  schema:email "Listonoh@ddd.com"@en ;
+  schema:givenName "Lee"@en ;
+  ns6:customerID 4.000000e+0 ;
+  schema:familyName "Stack"@en ;
+  ns0:NfcTag <http://example.org/whiskeyman/nfcTag/4> .
+
+<http://example.org/whiskeyman/Description/3>
+  schema:name "Bowmore 18 y.o."@en ;
+  ns5:age 1.800000e+1 ;
+  ns0:Description 3.000000e+0 ;
+  ns5:abv 4.300000e+1 ;
+  ns0:DistilledAt <http://example.org/whiskeyman/Distillery/2> .
+
+<http://example.org/whiskeyman/Ownership/2>
+  ns0:Ownership 2.000000e+0 ;
+  ns0:OwnedBottle <http://example.org/whiskeyman/Bottle/4> ;
+  ns0:Customer <http://example.org/whiskeyman/Customer/3> ;
+  ns0:Share 5.000000e+1 .
+
+<http://example.org/whiskeyman/SpecialPrice/1>
+  ns0:Customer <http://example.org/whiskeyman/Customer/1> ;
+  ns0:PriceForML 6.500000e+1 ;
+  ns7:specialPriceID 1.000000e+0 .
+
+<https://example.org/whiskeyman/data-specialPrice.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/SpecialPrice/2> ;
+    a csvw:Row ;
+    csvw:url ns7:row=3 ;
+    csvw:rownum 2
+  ], [
+    csvw:describes <http://example.org/whiskeyman/SpecialPrice/1> ;
+    a csvw:Row ;
+    csvw:url ns7:row=2 ;
+    csvw:rownum 1
+  ], [
+    csvw:describes <http://example.org/whiskeyman/SpecialPrice/3> ;
+    a csvw:Row ;
+    csvw:url ns7:row=4 ;
+    csvw:rownum 3
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-specialPrice.csv> .
+
+<http://example.org/whiskeyman/nfcTag/3>
+  schema:Text "OXPZ6940ADS75" ;
+  schema:purchaseDate "2012-04-20T12:00:00"^^xsd:dateTime ;
+  ns8:nfcTagID 3.000000e+0 .
+
+<http://example.org/whiskeyman/nfcTag/1>
+  schema:Text "OXPR456ADS75" ;
+  schema:purchaseDate "2020-06-09T12:00:00"^^xsd:dateTime ;
+  ns8:nfcTagID 1.000000e+0 .
+
+<https://example.org/whiskeyman/data-bottle.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/Bottle/4> ;
+    a csvw:Row ;
+    csvw:url ns2:row=5 ;
+    csvw:rownum 4
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Bottle/5> ;
+    a csvw:Row ;
+    csvw:url ns2:row=6 ;
+    csvw:rownum 5
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Bottle/3> ;
+    a csvw:Row ;
+    csvw:url ns2:row=4 ;
+    csvw:rownum 3
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Bottle/2> ;
+    a csvw:Row ;
+    csvw:url ns2:row=3 ;
+    csvw:rownum 2
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Bottle/1> ;
+    a csvw:Row ;
+    csvw:url ns2:row=2 ;
+    csvw:rownum 1
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-bottle.csv> .
+
+<https://example.org/whiskeyman/data-nfcTag.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/nfcTag/1> ;
+    a csvw:Row ;
+    csvw:url ns8:row=2 ;
+    csvw:rownum 1
+  ], [
+    csvw:describes <http://example.org/whiskeyman/nfcTag/2> ;
+    a csvw:Row ;
+    csvw:url ns8:row=3 ;
+    csvw:rownum 2
+  ], [
+    csvw:describes <http://example.org/whiskeyman/nfcTag/3> ;
+    a csvw:Row ;
+    csvw:url ns8:row=4 ;
+    csvw:rownum 3
+  ], [
+    csvw:describes <http://example.org/whiskeyman/nfcTag/4> ;
+    a csvw:Row ;
+    csvw:url ns8:row=5 ;
+    csvw:rownum 4
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-nfcTag.csv> .
+
+<http://example.org/whiskeyman/Distillery/4>
+  schema:name "Redbreast"@en ;
+  ns0:Founded "1903" ;
+  ns3:distilleryID 4.000000e+0 ;
+  ns0:RegionOf <http://example.org/whiskeyman/Region/4> .
+
+<http://example.org/whiskeyman/nfcTag/2>
+  schema:Text "OXPC987ADS75" ;
+  schema:purchaseDate "2001-09-11T12:00:00"^^xsd:dateTime ;
+  ns8:nfcTagID 2.000000e+0 .
+
+<http://example.org/whiskeyman/Description/4>
+  schema:name "Redbreast 12 y.o."@en ;
+  ns5:age 1.200000e+1 ;
+  ns0:Description 4.000000e+0 ;
+  ns5:abv 4.000000e+1 ;
+  ns0:DistilledAt <http://example.org/whiskeyman/Distillery/4> .
+
+<http://example.org/whiskeyman/Customer/2>
+  schema:name "Vojtech Brecka"@en ;
+  ns0:Login "TurboKraken"@en ;
+  schema:email "HyperKraken@hotmail.com"@en ;
+  schema:givenName "Vojtech"@en ;
+  ns6:customerID 2.000000e+0 ;
+  schema:familyName "Brecka"@en ;
+  ns0:NfcTag <http://example.org/whiskeyman/nfcTag/1> .
+
+<http://example.org/whiskeyman/nfcTag/4>
+  schema:Text "OXPZ5540ADS75" ;
+  schema:purchaseDate "2022-04-20T12:00:00"^^xsd:dateTime ;
+  ns8:nfcTagID 4.000000e+0 .
+
+<http://example.org/whiskeyman/Transaction/1>
+  schema:Price 0.000000e+0 ;
+  ns0:TransactionedBottle <http://example.org/whiskeyman/Bottle/2> ;
+  ns0:AmmountMl 2.000000e+2 ;
+  ns1:transactionID 1.000000e+0 ;
+  schema:purchaseDate "2020-12-31T23:57:00"^^xsd:dateTime ;
+  ns0:TransactionMadeBY <http://example.org/whiskeyman/Customer/2> .
+
+<http://example.org/whiskeyman/SpecialPrice/2>
+  ns0:Customer <http://example.org/whiskeyman/Customer/2> ;
+  ns0:PriceForML 0.000000e+0 ;
+  ns7:specialPriceID 2.000000e+0 .
+
+<https://example.org/whiskeyman/data-customer.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/Customer/4> ;
+    a csvw:Row ;
+    csvw:url ns6:row=5 ;
+    csvw:rownum 4
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Customer/1> ;
+    a csvw:Row ;
+    csvw:url ns6:row=2 ;
+    csvw:rownum 1
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Customer/2> ;
+    a csvw:Row ;
+    csvw:url ns6:row=3 ;
+    csvw:rownum 2
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Customer/3> ;
+    a csvw:Row ;
+    csvw:url ns6:row=4 ;
+    csvw:rownum 3
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-customer.csv> .
+
+<https://example.org/whiskeyman/data-bottleDescription.csv-metadata.json>
+  csvw:row [
+    csvw:describes <http://example.org/whiskeyman/Description/1> ;
+    a csvw:Row ;
+    csvw:url <file://root/src/data_formats/4/csv/data-bottleDescription.csv#row=2> ;
+    csvw:rownum 1
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Description/2> ;
+    a csvw:Row ;
+    csvw:url <file://root/src/data_formats/4/csv/data-bottleDescription.csv#row=3> ;
+    csvw:rownum 2
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Description/3> ;
+    a csvw:Row ;
+    csvw:url <file://root/src/data_formats/4/csv/data-bottleDescription.csv#row=4> ;
+    csvw:rownum 3
+  ], [
+    csvw:describes <http://example.org/whiskeyman/Description/4> ;
+    a csvw:Row ;
+    csvw:url <file://root/src/data_formats/4/csv/data-bottleDescription.csv#row=5> ;
+    csvw:rownum 4
+  ] ;
+  a csvw:Table ;
+  csvw:url <file://root/src/data_formats/4/csv/data-bottleDescription.csv> .
+
+<http://example.org/whiskeyman/Bottle/1>
+  ns0:InStock false ;
+  schema:barcode 1.348690e+6 ;
+  schema:purchaseDate "1999-09-01T00:00:00"^^xsd:dateTime ;
+  ns0:PriceForML 6.900000e+1 ;
+  ns2:bottleID 1.000000e+0 ;
+  ns0:PriceForBottle 1.130000e+3 ;
+  ns0:DescribedBy <http://example.org/whiskeyman/Description/1> .
+
+<http://example.org/whiskeyman/Customer/1>
+  schema:name "Matyas Brabec"@en ;
+  ns0:Login "KutalejiciseKrava"@en ;
+  schema:email "Stooped@hotmail.com"@en ;
+  schema:givenName "Matyas"@en ;
+  ns6:customerID 1.000000e+0 ;
+  schema:familyName "Brabec"@en .
+
+<http://example.org/whiskeyman/Region/4>
+  schema:name "Ireland"@en ;
+  ns4:regionID 4.000000e+0 .
+
+<http://example.org/whiskeyman/Ownership/3>
+  ns0:Ownership 3.000000e+0 ;
+  ns0:OwnedBottle <http://example.org/whiskeyman/Bottle/4> ;
+  ns0:Customer <http://example.org/whiskeyman/Customer/1> ;
+  ns0:Share 5.000000e+1 .
+
+<http://example.org/whiskeyman/Description/2>
+  schema:name "Glenfiddich 15 y.o."@en ;
+  ns5:age 1.500000e+1 ;
+  ns0:Description 2.000000e+0 ;
+  ns5:abv 4.000000e+1 ;
+  ns0:DistilledAt <http://example.org/whiskeyman/Distillery/3> .
+
+<http://example.org/whiskeyman/Bottle/2>
+  ns0:InStock true ;
+  schema:barcode 3.454665e+6 ;
+  schema:purchaseDate "1939-09-01T00:00:00"^^xsd:dateTime ;
+  ns0:PriceForML 8.700000e+1 ;
+  ns2:bottleID 2.000000e+0 ;
+  ns0:PriceForBottle 9.780000e+2 ;
+  ns0:DescribedBy <http://example.org/whiskeyman/Description/2> .
+
+<http://example.org/whiskeyman/Transaction/3>
+  schema:Price 6.900000e+4 ;
+  ns0:TransactionedBottle <http://example.org/whiskeyman/Bottle/1> ;
+  ns0:AmmountMl 1.000000e+3 ;
+  ns1:transactionID 3.000000e+0 ;
+  schema:purchaseDate "2021-01-12T12:00:00"^^xsd:dateTime ;
+  ns0:TransactionMadeBY <http://example.org/whiskeyman/Customer/1> .
+
+<http://example.org/whiskeyman/Customer/3>
+  schema:name "Vojtech Mikiska"@en ;
+  ns0:Login "TurboBurt"@en ;
+  schema:email "TurboBurt@nitroParek.com"@en ;
+  schema:givenName "Vojtech"@en ;
+  ns6:customerID 3.000000e+0 ;
+  schema:familyName "Mykiska"@en ;
+  ns0:NfcTag <http://example.org/whiskeyman/nfcTag/3> .
+
+<http://example.org/whiskeyman/SpecialPrice/3>
+  ns0:Customer <http://example.org/whiskeyman/Customer/1> ;
+  ns0:PriceForML 5.000000e+1 ;
+  ns7:specialPriceID 3.000000e+0 .
+
+<http://example.org/whiskeyman/Ownership/1>
+  ns0:Ownership 1.000000e+0 ;
+  ns0:OwnedBottle <http://example.org/whiskeyman/Bottle/3> ;
+  ns0:Customer <http://example.org/whiskeyman/Customer/2> ;
+  ns0:Share 1.000000e+2 .
