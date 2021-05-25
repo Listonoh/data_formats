@@ -1,5 +1,5 @@
 customerID,nfcTagID,name,givenName,familyName,email,login
-1,77,Matyas Brabec,Matyas,Brabec,Stooped@hotmail.com,KutalejiciseKrava
+1,,Matyas Brabec,Matyas,Brabec,Stooped@hotmail.com,KutalejiciseKrava
 2,1,Vojtech Brecka,Vojtech,Brecka,HyperKraken@hotmail.com,TurboKraken
 3,3,Vojtech Mikiska,Vojtech,Mykiska,TurboBurt@nitroParek.com,TurboBurt
 4,4,lee stack,Lee,Stack,Listonoh@ddd.com,LeeStack

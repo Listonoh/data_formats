@@ -524,7 +524,7 @@
                         "name": "nfcTagID",
                         "titles": "nfcTagID",
                         "dc:description": "ID of NFC tag",
-                        "required": true,
+                        "required": false,
                         "datatype": "number",
                         "propertyUrl": "ex:NfcTag",
                         "valueUrl": "http://example.org/whiskeyman/nfcTag/{nfcTagID}"
