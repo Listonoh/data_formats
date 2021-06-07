@@ -25,7 +25,7 @@
 						"datatype": "string",
 						"aboutUrl": "http://example.org/whiskeyman/{regionID}",
 						"propertyUrl": "rdf:type",
-						"valueURL": "http://example.org/whiskeyman/Region:"
+						"valueUrl": "http://example.org/whiskeyman/Region"
 					},
 					{
 						"@type": "Column",
