@@ -1,186 +1,243 @@
 {
-    "@context": {
-        "ex": "http://example.org/whiskeyman/",
-        "foaf": "http://xmlns.com/foaf/0.1/",
-        "whisky": "https://vocab.org/whisky/terms/",
-        "dcat": "http://www.w3.org/ns/dcat/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "schema": "http://schema.org/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "cerif": "http://www.eurocris.org/ontologies/cerif/1.3/",
-        "Region": {
-            "@id": "http://example.org/whiskeyman/Region",
-            "@container": "@language"
-        },
-        "bottleID": "http://example.org/whiskeyman/BottleID",
-        "CustomerID": "http://example.org/whiskeyman/CustomerID",
-        "login": "http://example.org/whiskeyman/Login",
-        "Ownerships": "http://example.org/whiskeyman/Ownership",
-        "share": "http://example.org/whiskeyman/Share",
-        "SpecialPrices": "http://example.org/whiskeyman/SpecialPrice",
-        "Distillery": "http://example.org/whiskeyman/Distillery",
-        "founded": "http://example.org/whiskeyman/Founded",
-        "bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
-        "shotPrice": "http://example.org/whiskeyman/PriceForML",
-        "ammountMl": "http://example.org/whiskeyman/AmmountMl",
-        "NfcTag": "http://example.org/whiskeyman/NfcTag",
-        "inStock": "http://example.org/whiskeyman/InStock",
-        "Transactions": "http://example.org/whiskeyman/Transaction",
-        "Described": "http://example.org/whiskeyman/DescribedBy",
-        "name": {
-            "@id": "http://schema.org/name",
-            "@container": "@language"
-        },
-        "givenName": "http://schema.org/givenName",
-        "familyName": "http://schema.org/familyName",
-        "email": "http://schema.org/email",
-        "price": "http://schema.org/price",
-        "purchaseDate": "http://schema.org/purchaseDate",
-        "creationTime": "http://schema.org/purchaseDate",
-        "barcode": "http://schema.org/barcode",
-        "currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
-        "voltage": "https://vocab.org/whisky/terms/voltage",
-        "age": "https://vocab.org/whisky/terms/age"
-    },
-    "@graph": [
-        {
-            "@id": "ex:matisek",
-            "@type": "ex:Customer",
-            "CustomerID": 1,
-            "name": {
-                "en": "Matyas Brabec"
-            },
-            "givenName": "Matyas",
-            "familyName": "Brabec",
-            "email": "Stooped@hotmail.com",
-            "login": "KutalejiciseKrava",
-            "Ownerships": [
-                {
-                    "share": 50,
-                    "bottleID": 4
-                }
-            ],
-            "SpecialPrices": [
-                {
-                    "price": 65,
-                    "currency": "CZK",
-                    "bottleID": 1
-                },
-                {
-                    "price": 50,
-                    "currency": "CZK",
-                    "bottleID": 4
-                }
-            ],
-            "Transactions": [
-                {
-                    "ammountMl": 1000,
-                    "price": 69000,
-                    "currency": "CZK",
-                    "creationTime": "2021-01-12T12:00:00",
-                    "bottleID": 1
-                }
-            ],
-            "NfcTag": []
-        },
-        {
-            "@id": "ex:fojtiseq",
-            "@type": "ex:Customer",
-            "CustomerID": 2,
-            "name": {
-                "en": "Vojtech Brecka"
-            },
-            "givenName": "Vojtech",
-            "familyName": "Brecka",
-            "email": "HyperKraken@hotmail.com",
-            "login": "TurboKraken",
-            "Ownerships": [
-                {
-                    "share": 100,
-                    "bottleID": 3
-                }
-            ],
-            "SpecialPrices": [
-                {
-                    "price": 0,
-                    "currency": "CZK",
-                    "bottleID": 3
-                }
-            ],
-            "Transactions": [
-                {
-                    "ammountMl": 200,
-                    "price": 0,
-                    "currency": "CZK",
-                    "creationTime": "2020-12-31T23:58:00",
-                    "bottleID": 3
-                },
-                {
-                    "ammountMl": 400,
-                    "price": 120,
-                    "currency": "CZK",
-                    "creationTime": "2020-12-31T23:58:00",
-                    "bottleID": 4
-                }
-            ],
-            "NfcTag": [
-                {
-                    "code": "OXPR456ADS75",
-                    "creationTime": "2020-06-09T23:58:00"
-                },
-                {
-                    "code": "OXPC987ADS75",
-                    "creationTime": "2001-09-11T23:58:00"
-                }
-            ]
-        },
-        {
-            "@id": "ex:kulicka",
-            "@type": "ex:Customer",
-            "CustomerID": 3,
-            "name": {
-                "en": "Vojtech Mikiska"
-            },
-            "givenName": "Vojtech",
-            "familyName": "Mykiska",
-            "email": "TurboBurt@nitroParek.com",
-            "login": "TurboBurt",
-            "Ownerships": [],
-            "SpecialPrices": [],
-            "Transactions": [],
-            "NfcTag": [
-                {
-                    "code": "OXPZ6940ADS75",
-                    "creationTime": "2012-04-20T23:58:00"
-                }
-            ]
-        },
-        {
-            "@id": "ex:listecek",
-            "@type": "ex:Customer",
-            "CustomerID": 4,
-            "name": {
-                "en": "lee stack"
-            },
-            "givenName": "Lee",
-            "familyName": "Stack",
-            "email": "Listonoh@ddd.com",
-            "login": "LeeStack",
-            "Ownerships": [
-                {
-                    "share": 50,
-                    "bottleID": 4
-                }
-            ],
-            "SpecialPrices": [],
-            "Transactions": [],
-            "NfcTag": [
-                {
-                    "code": "OXPZ5540ADS75",
-                    "creationTime": "2022-04-20T23:58:00"
-                }
-            ]
-        }
-    ]
+	"@context": {
+		"ex": "http://example.org/whiskeyman/",
+		"foaf": "http://xmlns.com/foaf/0.1/",
+		"whisky": "https://vocab.org/whisky/terms/",
+		"dcat": "http://www.w3.org/ns/dcat/",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"schema": "http://schema.org/",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"cerif": "http://www.eurocris.org/ontologies/cerif/1.3/",
+		"Region": {
+			"@id": "http://example.org/whiskeyman/Region",
+			"@container": "@language"
+		},
+		"namel": {
+			"@id": "http://schema.org/name",
+			"@container": "@language"
+		},
+		"RegionOf": "ex:RegionOf",
+		"login": "http://example.org/whiskeyman/Login",
+		"Ownerships": "http://example.org/whiskeyman/Ownership",
+		"OwnedBottle": "ex:OwnedBottle",
+		"SPBottle": "ex:SPBottle",
+		"PriceForML": "ex:PriceForML",
+		"TransactionedBottle": "ex:TransactionedBottle",
+		"TransactionMadeBY": "ex:TransactionMadeBY",
+		"code": "schema:Text",
+		"share": "http://example.org/whiskeyman/Share",
+		"Distillery": "http://example.org/whiskeyman/Distillery",
+		"founded": "http://example.org/whiskeyman/Founded",
+		"bottlePrice": "http://example.org/whiskeyman/PriceForBottle",
+		"shotPrice": "http://example.org/whiskeyman/PriceForML",
+		"ammountMl": "http://example.org/whiskeyman/AmmountMl",
+		"NfcTag": "http://example.org/whiskeyman/NfcTag",
+		"CNfcTag": "ex:CNfcTag",
+		"Owns": "ex:Owns",
+		"inStock": "http://example.org/whiskeyman/InStock",
+		"DescribedBy": "http://example.org/whiskeyman/DescribedBy",
+		"name": "http://schema.org/name",
+		"givenName": "http://schema.org/givenName",
+		"familyName": "http://schema.org/familyName",
+		"email": "http://schema.org/email",
+		"price": "http://schema.org/price",
+		"purchaseDate": "http://schema.org/purchaseDate",
+		"creationTime": "http://schema.org/purchaseDate",
+		"barcode": "http://schema.org/barcode",
+		"currency": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
+		"voltage": "https://vocab.org/whisky/terms/abv",
+		"DistilledAt": "ex:DistilledAt",
+		"SpecialPrices": "ex:CSpecialPrice",
+		"Ownershipsl": "ex:ddd",
+		"Transactions": "ex:ddd",
+		"age": "https://vocab.org/whisky/terms/age"
+	},
+	"@graph": [
+		{
+			"@id": "ex:matisek",
+			"@type": "ex:Customer",
+			"name": "Matyas Brabec",
+			"givenName": "Matyas",
+			"familyName": "Brabec",
+			"email": "Stooped@hotmail.com",
+			"login": "KutalejiciseKrava",
+			"Owns": [
+				{
+					"@id": "ex:ow-10003",
+					"@type": "ex:Ownership",
+					"share": 50,
+					"OwnedBottle": { "@id": "ex:honziq_redb12" },
+					"bottleID": 4
+				}
+			],
+			"SpecialPrices": [
+				{
+					"@id": "ex:matFor65",
+					"@type": "ex:SpecialPrice",
+					"PriceForML": 65,
+					"currency": "CZK",
+					"bottleID": 1,
+					"SPBottle": { "@id": "ex:matyseq_laga16" }
+				},
+				{
+					"@id": "ex:matFor50",
+					"@type": "ex:SpecialPrice",
+					"PriceForML": 50,
+					"currency": "CZK",
+					"bottleID": 4,
+					"SPBottle": { "@id": "ex:honziq_redb12" }
+				}
+			],
+			"Transactions": [
+				{
+					"@id": "ex:tr-00003",
+					"@type": "ex:Transaction",
+					"ammountMl": 1000,
+					"price": 69000,
+					"currency": "CZK",
+					"creationTime": {
+						"@value": "2021-01-12T12:00:00",
+						"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+					},
+					"TransactionedBottle": { "@id": "ex:matyseq_laga16" },
+					"TransactionMadeBY": { "@id": "ex:matisek" },
+					"bottleID": 1
+				}
+			],
+			"NfcTag": []
+		},
+		{
+			"@id": "ex:fojtiseq",
+			"@type": "ex:Customer",
+			"name": "Vojtech Brecka",
+			"givenName": "Vojtech",
+			"familyName": "Brecka",
+			"email": "HyperKraken@hotmail.com",
+			"login": "TurboKraken",
+			"Owns": [
+				{
+					"@id": "ex:ow-10001",
+					"@type": "ex:Ownership",
+					"share": 100,
+					"OwnedBottle": { "@id": "ex:fojtiseq_laga16" },
+					"bottleID": 3
+				}
+			],
+			"SpecialPrices": [
+				{
+					"@id": "ex:for00",
+					"@type": "ex:SpecialPrice",
+					"PriceForML": 0,
+					"currency": "CZK",
+					"SPBottle": { "@id": "ex:fojtiseq_laga16" },
+					"bottleID": 3
+				}
+			],
+			"Transactions": [
+				{
+					"@id": "ex:tr-00001",
+					"@type": "ex:Transaction",
+					"ammountMl": 200,
+					"price": 0,
+					"currency": "CZK",
+					"creationTime": {
+						"@value": "2020-12-31T23:58:00",
+						"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+					},
+					"TransactionedBottle": { "@id": "ex:fojtiseq_laga16" },
+					"TransactionMadeBY": { "@id": "ex:fojtiseq" },
+					"bottleID": 3
+				},
+				{
+					"@id": "ex:tr-00002",
+					"@type": "ex:Transaction",
+					"ammountMl": 400,
+					"price": 120,
+					"currency": "CZK",
+					"creationTime": {
+						"@value": "2020-12-31T23:58:00",
+						"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+					},
+					"TransactionedBottle": { "@id": "ex:honziq_redb12" },
+					"TransactionMadeBY": { "@id": "ex:fojtiseq" },
+					"bottleID": 4
+				}
+			],
+			"CNfcTag": [
+				{
+					"@id": "ex:testTag",
+					"@type": "ex:NfcTag",
+					"code": "OXPR456ADS75",
+					"creationTime": {
+						"@value": "2020-06-09T23:58:00",
+						"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+					}
+				},
+				{
+					"@id": "ex:fojtisequv",
+					"@type": "ex:NfcTag",
+					"code": "OXPC987ADS75",
+					"creationTime": {
+						"@value": "2001-09-11T23:58:00",
+						"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+					}
+				}
+			]
+		},
+		{
+			"@id": "ex:kulicka",
+			"@type": "ex:Customer",
+			"name": "Vojtech Mikiska",
+			"givenName": "Vojtech",
+			"familyName": "Mykiska",
+			"email": "TurboBurt@nitroParek.com",
+			"login": "TurboBurt",
+			"Owns": [],
+			"SpecialPrices": [],
+			"Transactions": [],
+			"CNfcTag": [
+				{
+					"@id": "ex:kulickuv",
+					"@type": "ex:NfcTag",
+					"code": "OXPZ6940ADS75",
+					"creationTime": {
+						"@value": "2012-04-20T23:58:00",
+						"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+					}
+				}
+			]
+		},
+		{
+			"@id": "ex:listecek",
+			"@type": "ex:Customer",
+			"name": "lee stack",
+			"givenName": "Lee",
+			"familyName": "Stack",
+			"email": "Listonoh@ddd.com",
+			"login": "LeeStack",
+			"Owns": [
+				{
+					"@id": "ex:ow-10002",
+					"@type": "ex:Ownership",
+					"share": 50,
+					"OwnedBottle": { "@id": "ex:honziq_redb12" },
+					"bottleID": 4
+				}
+			],
+			"SpecialPrices": [],
+			"Transactions": [],
+			"CNfcTag": [
+				{
+					"@id": "ex:listSvobod",
+					"@type": "ex:NfcTag",
+					"code": "OXPZ5540ADS75",
+					"creationTime": {
+						"@value": "2022-04-20T23:58:00",
+						"@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+					}
+				}
+			]
+		}
+	]
 }

@@ -1,4 +1,4 @@
 specialPriceID,customerID,bottleID,price
-1,1,1,65
-2,2,3,0
-3,1,4,50
+matFor65,matisek,matyseq_laga16,65
+for00,fojtiseq,fojtiseq_laga16,0
+matFor50,matisek,honziq_redb12,50

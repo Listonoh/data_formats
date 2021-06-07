@@ -1,0 +1,141 @@
+[
+	{
+		"@id": "http://example.org/whiskeyman/AmmountMl",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://schema.org/Transaction" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Number" } ]
+	},
+	{ "@id": "http://example.org/whiskeyman/Bottle", "@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ] },
+	{
+		"@id": "http://example.org/whiskeyman/BottleID",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Bottle" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Number" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/CNfcTag",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Customer" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://example.org/whiskeyman/NafcTag" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/CSpecialPrice",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Customer" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://example.org/whiskeyman/SpecialPrice" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/Customer",
+		"http://www.w3.org/2000/01/rdf-schema#subClassOf": [ { "@id": "http://schema.org/Person" } ],
+		"@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ],
+		"http://www.w3.org/2000/01/rdf-schema#label": [
+			{ "@value": "A class containing all informations about customer", "@language": "en" }
+		]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/CustomerID",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Customer" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Number" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/DescribedBy",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Bottle" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://example.org/whiskeyman/Description" } ]
+	},
+	{ "@id": "http://example.org/whiskeyman/Description", "@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ] },
+	{
+		"@id": "http://example.org/whiskeyman/DistilledAt",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Description" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Distillery" } ]
+	},
+	{ "@id": "http://example.org/whiskeyman/Distillery", "@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ] },
+	{
+		"@id": "http://example.org/whiskeyman/Founded",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Distillery" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Number" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/InStock",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Bottle" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://www.w3.org/2001/XMLSchema#Boolean" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/Login",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Customer" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Text" } ]
+	},
+	{ "@id": "http://example.org/whiskeyman/NafcTag" },
+	{ "@id": "http://example.org/whiskeyman/NfcTag", "@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ] },
+	{
+		"@id": "http://example.org/whiskeyman/OwnedBottle",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Ownership" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://example.org/whiskeyman/Bottle" } ]
+	},
+	{ "@id": "http://example.org/whiskeyman/Ownership", "@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ] },
+	{
+		"@id": "http://example.org/whiskeyman/Owns",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Customer" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://example.org/whiskeyman/Ownership" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/PriceForBottle",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Number" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/PriceForML",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Number" } ]
+	},
+	{ "@id": "http://example.org/whiskeyman/Region", "@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ] },
+	{
+		"@id": "http://example.org/whiskeyman/RegionOf",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Distillery" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Region" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/SPBottle",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/SpecialPrice" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Bottle" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/Share",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Ownership" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://schema.org/Number" } ]
+	},
+	{ "@id": "http://example.org/whiskeyman/SpecialPrice", "@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ] },
+	{ "@id": "http://example.org/whiskeyman/Transaction", "@type": [ "http://www.w3.org/2000/01/rdf-schema#Class" ] },
+	{
+		"@id": "http://example.org/whiskeyman/TransactionMadeBY",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Transaction" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://example.org/whiskeyman/Customer" } ]
+	},
+	{
+		"@id": "http://example.org/whiskeyman/TransactionedBottle",
+		"@type": [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" ],
+		"http://www.w3.org/2000/01/rdf-schema#domain": [ { "@id": "http://example.org/whiskeyman/Transaction" } ],
+		"http://www.w3.org/2000/01/rdf-schema#range": [ { "@id": "http://example.org/whiskeyman/Bottle" } ]
+	},
+	{ "@id": "http://schema.org/Bottle" },
+	{ "@id": "http://schema.org/Distillery" },
+	{ "@id": "http://schema.org/Number" },
+	{ "@id": "http://schema.org/Person" },
+	{ "@id": "http://schema.org/Region" },
+	{ "@id": "http://schema.org/Text" },
+	{ "@id": "http://schema.org/Transaction" },
+	{ "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" },
+	{ "@id": "http://www.w3.org/2000/01/rdf-schema#Class" },
+	{ "@id": "http://www.w3.org/2001/XMLSchema#Boolean" }
+]
