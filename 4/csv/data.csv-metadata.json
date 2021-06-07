@@ -141,7 +141,6 @@
 						"dc:description": "Destillery name",
 						"required": true,
 						"datatype": "string",
-						"lang": "en",
 						"propertyUrl": "schema:name",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleDescriptionID}"
 					},
@@ -152,7 +151,7 @@
 						"dc:description": "age of bottle",
 						"required": true,
 						"datatype": "int",
-						"propertyUrl": "whisky:age",
+						"propertyUrl": "https://vocab.org/whisky/terms/age",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleDescriptionID}"
 					},
 					{
@@ -162,7 +161,7 @@
 						"dc:description": "percent of alcohol in bottle",
 						"required": true,
 						"datatype": "int",
-						"propertyUrl": "whisky:abv",
+						"propertyUrl": "https://vocab.org/whisky/terms/abv",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleDescriptionID}"
 					}
 				],
@@ -578,7 +577,6 @@
 						"dc:description": "Customers full name",
 						"required": true,
 						"datatype": "string",
-						"lang": "en",
 						"propertyUrl": "schema:name",
 						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
 					},
@@ -589,7 +587,6 @@
 						"dc:description": "Given Name",
 						"required": true,
 						"datatype": "string",
-						"lang": "en",
 						"propertyUrl": "schema:givenName",
 						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
 					},
@@ -600,7 +597,6 @@
 						"dc:description": "Family Name",
 						"required": true,
 						"datatype": "string",
-						"lang": "en",
 						"propertyUrl": "schema:familyName",
 						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
 					},
@@ -611,7 +607,6 @@
 						"dc:description": "Email of this customer",
 						"required": false,
 						"datatype": "string",
-						"lang": "en",
 						"propertyUrl": "schema:email",
 						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
 					},
@@ -622,7 +617,6 @@
 						"dc:description": "Login of this customer",
 						"required": false,
 						"datatype": "string",
-						"lang": "en",
 						"propertyUrl": "http://example.org/whiskeyman/Login",
 						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
 					}
