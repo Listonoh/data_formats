@@ -1,0 +1,211 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/csvw",
+		{
+			"@language": "en"
+		}
+	],
+	"@type": "TableGroup",
+	"@id": "https://example.org/public-contracts/contracts4.csv-metadata.json",
+	"dc:description": "Public contracts",
+	"tables": [
+		{
+			"@id": "https://example.org/public-contracts/contracts4-contracts.csv-metadata.json",
+			"@type": "Table",
+			"url": "contracts3-contracts.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"aboutUrl": "{+uri}",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "uri",
+						"titles": "URI",
+						"dc:description": "Public contract URI",
+						"required": true,
+						"datatype": "anyURI",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/vocabulary/PublicContract"
+					},
+					{
+						"@type": "Column",
+						"name": "published_time",
+						"titles": "published_time",
+						"dc:description": "Date and time the public contract was published.",
+						"required": true,
+						"datatype": "datetime",
+						"propertyUrl": "http://example.org/vocabulary/publishTime"
+					},
+					{
+						"@type": "Column",
+						"name": "title_cs",
+						"titles": "title_cs",
+						"dc:description": "Public contract title in Czech",
+						"datatype": "string",
+						"lang": "cs",
+						"propertyUrl": "dc:title"
+					},
+					{
+						"@type": "Column",
+						"name": "title_en",
+						"titles": "title_en",
+						"dc:description": "Public contract title in English",
+						"datatype": "string",
+						"lang": "en",
+						"propertyUrl": "dc:title"
+					},
+					{
+						"@type": "Column",
+						"name": "price_value",
+						"titles": "price_value",
+						"dc:description": "Public contract price value",
+						"datatype": "number",
+						"aboutUrl": "{+uri}/price",
+						"propertyUrl": "http://purl.org/goodrelations/v1#hasCurrencyValue"
+					},
+					{
+						"@type": "Column",
+						"name": "price_currency",
+						"titles": "price_currency",
+						"dc:description": "Public contract price currency",
+						"datatype": "string",
+						"aboutUrl": "{+uri}/price",
+						"propertyUrl": "http://purl.org/goodrelations/v1#hasCurrency"
+					},
+					{
+						"@type": "Column",
+						"name": "authority_id",
+						"titles": "authority_id",
+						"dc:description": "Contracting authority ID",
+						"datatype": "string",
+						"propertyUrl": "http://example.org/vocabulary/contractingAuthority",
+						"valueUrl": "http://example.org/resource/companies/{authority_id}"
+					},
+					{
+						"@type": "Column",
+						"name": "publisher",
+						"titles": "publisher",
+						"dc:description": "Publisher of the public contract",
+						"datatype": "string",
+						"propertyUrl": "http://example.org/vocabulary/publisher"
+					},
+					{
+						"@type": "Column",
+						"virtual": true,
+						"propertyUrl": "http://purl.org/goodrelations/v1#hasPriceSpecification",
+						"valueUrl": "{+uri}/price"
+					},
+					{
+						"@type": "Column",
+						"virtual": true,
+						"aboutUrl": "{+uri}/price",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://purl.org/goodrelations/v1#PriceSpecification"
+					}
+				],
+				"primaryKey": "uri",
+				"foreignKeys": [
+					{
+						"columnReference": "authority_id",
+						"reference": {
+							"resource": "contracts3-companies.csv",
+							"columnReference": "id"
+						}
+					}
+				]
+			}
+		},
+		{
+			"@id": "https://example.org/public-contracts/contracts4-supplies.csv-metadata.json",
+			"@type": "Table",
+			"url": "contracts3-supplies.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "contract_uri",
+						"titles": "contract_uri",
+						"dc:description": "Public contract URI",
+						"required": true,
+						"datatype": "anyURI"
+					},
+					{
+						"@type": "Column",
+						"name": "supplier_id",
+						"titles": "supplier_id",
+						"dc:description": "Supplier ID",
+						"required": true,
+						"datatype": "string",
+						"aboutUrl": "{+contract_uri}",
+						"propertyUrl": "http://example.org/vocabulary/supplier",
+						"valueUrl": "http://example.org/resource/companies/{supplier_id}"
+					}
+				],
+				"primaryKey": [ "contract_uri", "supplier_id" ],
+				"foreignKeys": [
+					{
+						"columnReference": "contract_uri",
+						"reference": {
+							"resource": "contracts3-contracts.csv",
+							"columnReference": "uri"
+						}
+					},
+					{
+						"columnReference": "supplier_id",
+						"reference": {
+							"resource": "contracts3-companies.csv",
+							"columnReference": "id"
+						}
+					}
+				]
+			}
+		},
+		{
+			"@id": "https://example.org/public-contracts/contracts4-companies.csv-metadata.json",
+			"@type": "Table",
+			"url": "contracts3-companies.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"aboutUrl": "http://example.org/resource/companies/{id}",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "name_cs",
+						"titles": "name_cs",
+						"dc:description": "Name of the company in Czech",
+						"datatype": "string",
+						"lang": "cs",
+						"propertyUrl": "dc:title"
+					},
+					{
+						"@type": "Column",
+						"name": "name_en",
+						"titles": "name_en",
+						"dc:description": "Name of the company in English",
+						"datatype": "string",
+						"lang": "en",
+						"propertyUrl": "dc:title"
+					},
+					{
+						"@type": "Column",
+						"name": "id",
+						"titles": "id",
+						"dc:description": "Company ID",
+						"datatype": "string",
+						"propertyUrl": "skos:notation"
+					},
+					{
+						"@type": "Column",
+						"name": "address",
+						"titles": "address",
+						"dc:description": "Address of the company",
+						"datatype": "string",
+						"propertyUrl": "http://example.org/vocabulary/address"
+					}
+				],
+				"primaryKey": "id"
+			}
+		}
+	]
+}
