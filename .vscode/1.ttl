@@ -1,0 +1,103 @@
+_:g425560 <file://root/src/data_formats/.vscode/contracts3-supplies.csv#contract_uri> "https://smlouvy.gov.cz/smlouva/1153037"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:g425540 <http://www.w3.org/ns/csvw#describes> _:g425560 .
+_:g425540 <http://www.w3.org/ns/csvw#describes> <https://smlouvy.gov.cz/smlouva/1153037> .
+_:g425540 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
+_:g425540 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:g425540 <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-supplies.csv#row=2> .
+_:g425660 <http://www.w3.org/ns/csvw#describes> <http://example.org/resource/companies/00293199> .
+_:g425660 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
+_:g425660 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:g425660 <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-companies.csv#row=3> .
+<http://example.org/resource/companies/00293199> <http://example.org/vocabulary/address> "Nám. Klášterní 125 Moravský Krumlov 67201 Czech Republic" .
+<http://example.org/resource/companies/00293199> <http://purl.org/dc/terms/title> "Město Moravský Krumlov"@cs .
+<http://example.org/resource/companies/00293199> <http://www.w3.org/2004/02/skos/core#notation> "00293199" .
+<http://example.org/resource/companies/27738809> <http://example.org/vocabulary/address> "Sochorova 3178/23 Brno 61600 Czech Republic" .
+<http://example.org/resource/companies/27738809> <http://purl.org/dc/terms/title> "Sivio Plan, s.r.o."@cs .
+<http://example.org/resource/companies/27738809> <http://www.w3.org/2004/02/skos/core#notation> "27738809" .
+_:g425740 <http://www.w3.org/ns/csvw#describes> <http://example.org/resource/companies/27738809> .
+_:g425740 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
+_:g425740 <http://www.w3.org/ns/csvw#rownum> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:g425740 <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-companies.csv#row=5> .
+_:g425620 <http://www.w3.org/ns/csvw#describes> <http://example.org/resource/companies/00164801> .
+_:g425620 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
+_:g425620 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:g425620 <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-companies.csv#row=2> .
+<https://example.org/public-contracts/contracts4-contracts.csv-metadata.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
+<https://example.org/public-contracts/contracts4-contracts.csv-metadata.json> <http://www.w3.org/ns/csvw#row> _:g425500 .
+<https://example.org/public-contracts/contracts4-contracts.csv-metadata.json> <http://www.w3.org/ns/csvw#row> _:g425460 .
+<https://example.org/public-contracts/contracts4-contracts.csv-metadata.json> <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-contracts.csv> .
+<https://smlouvy.gov.cz/smlouva/1153341/price> <http://purl.org/goodrelations/v1#hasCurrencyValue> "24"^^<http://www.w3.org/2001/XMLSchema#double> .
+<https://smlouvy.gov.cz/smlouva/1153341/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#PriceSpecification> .
+<https://smlouvy.gov.cz/smlouva/1153341/price> <http://purl.org/goodrelations/v1#hasCurrency> "USD" .
+<https://smlouvy.gov.cz/smlouva/1153341> <http://example.org/vocabulary/contractingAuthority> <http://example.org/resource/companies/00293199> .
+<https://smlouvy.gov.cz/smlouva/1153341> <http://purl.org/goodrelations/v1#hasPriceSpecification> <https://smlouvy.gov.cz/smlouva/1153341/price> .
+<https://smlouvy.gov.cz/smlouva/1153341> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/PublicContract> .
+<https://smlouvy.gov.cz/smlouva/1153341> <http://example.org/vocabulary/publishTime> "2018-02-01T07:33:14+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://smlouvy.gov.cz/smlouva/1153341> <http://example.org/vocabulary/supplier> <http://example.org/resource/companies/27738809> .
+<https://smlouvy.gov.cz/smlouva/1153341> <http://purl.org/dc/terms/title> "Smlouva o projektové přípravě (akce III/3963, ul.Rakšická)"@cs .
+<https://smlouvy.gov.cz/smlouva/1153037/price> <http://purl.org/goodrelations/v1#hasCurrencyValue> "35678"^^<http://www.w3.org/2001/XMLSchema#double> .
+<https://smlouvy.gov.cz/smlouva/1153037/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#PriceSpecification> .
+<https://smlouvy.gov.cz/smlouva/1153037/price> <http://purl.org/goodrelations/v1#hasCurrency> "CZK" .
+_:g425500 <http://www.w3.org/ns/csvw#describes> <https://smlouvy.gov.cz/smlouva/1153341/price> .
+_:g425500 <http://www.w3.org/ns/csvw#describes> <https://smlouvy.gov.cz/smlouva/1153341> .
+_:g425500 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
+_:g425500 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:g425500 <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-contracts.csv#row=3> .
+<https://example.org/public-contracts/contracts4-supplies.csv-metadata.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
+<https://example.org/public-contracts/contracts4-supplies.csv-metadata.json> <http://www.w3.org/ns/csvw#row> _:g425540 .
+<https://example.org/public-contracts/contracts4-supplies.csv-metadata.json> <http://www.w3.org/ns/csvw#row> _:g425580 .
+<https://example.org/public-contracts/contracts4-supplies.csv-metadata.json> <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-supplies.csv> .
+_:g425580 <http://www.w3.org/ns/csvw#describes> <https://smlouvy.gov.cz/smlouva/1153341> .
+_:g425580 <http://www.w3.org/ns/csvw#describes> _:g425600 .
+_:g425580 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
+_:g425580 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:g425580 <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-supplies.csv#row=3> .
+_:g425800 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Usage> .
+_:g425800 <http://www.w3.org/ns/prov#entity> <file://root/src/data_formats/.vscode/contracts3-companies.csv> .
+_:g425800 <http://www.w3.org/ns/prov#entity> <file://root/src/data_formats/.vscode/contracts3-supplies.csv> .
+_:g425800 <http://www.w3.org/ns/prov#entity> <file://root/src/data_formats/.vscode/contracts3-contracts.csv> .
+_:g425800 <http://www.w3.org/ns/prov#hadRole> <http://www.w3.org/ns/csvw#csvEncodedTabularData> .
+_:g425600 <file://root/src/data_formats/.vscode/contracts3-supplies.csv#contract_uri> "https://smlouvy.gov.cz/smlouva/1153341"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://example.org/public-contracts/contracts4.csv-metadata.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#TableGroup> .
+<https://example.org/public-contracts/contracts4.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://example.org/public-contracts/contracts4-contracts.csv-metadata.json> .
+<https://example.org/public-contracts/contracts4.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://example.org/public-contracts/contracts4-companies.csv-metadata.json> .
+<https://example.org/public-contracts/contracts4.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://example.org/public-contracts/contracts4-supplies.csv-metadata.json> .
+<https://example.org/public-contracts/contracts4.csv-metadata.json> <http://purl.org/dc/terms/description> "Public contracts"@en .
+<https://example.org/public-contracts/contracts4.csv-metadata.json> <http://www.w3.org/ns/prov#wasGeneratedBy> _:g425780 .
+_:g425780 <http://www.w3.org/ns/prov#wasAssociatedWith> <https://rubygems.org/gems/rdf-tabular> .
+_:g425780 <http://www.w3.org/ns/prov#qualifiedUsage> _:g425800 .
+_:g425780 <http://www.w3.org/ns/prov#qualifiedUsage> _:g425820 .
+_:g425780 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+_:g425780 <http://www.w3.org/ns/prov#startedAtTime> "2021-06-08T01:09:10.867+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:g425780 <http://www.w3.org/ns/prov#endedAtTime> "2021-06-08T01:09:11.024+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://example.org/resource/companies/67416501> <http://example.org/vocabulary/address> "Pernerova 536/6 Praha 18600 Czech Republic" .
+<http://example.org/resource/companies/67416501> <http://purl.org/dc/terms/title> "Kamil M"@cs .
+<http://example.org/resource/companies/67416501> <http://www.w3.org/2004/02/skos/core#notation> "67416501" .
+<https://example.org/public-contracts/contracts4-companies.csv-metadata.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
+<https://example.org/public-contracts/contracts4-companies.csv-metadata.json> <http://www.w3.org/ns/csvw#row> _:g425660 .
+<https://example.org/public-contracts/contracts4-companies.csv-metadata.json> <http://www.w3.org/ns/csvw#row> _:g425740 .
+<https://example.org/public-contracts/contracts4-companies.csv-metadata.json> <http://www.w3.org/ns/csvw#row> _:g425620 .
+<https://example.org/public-contracts/contracts4-companies.csv-metadata.json> <http://www.w3.org/ns/csvw#row> _:g425700 .
+<https://example.org/public-contracts/contracts4-companies.csv-metadata.json> <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-companies.csv> .
+_:g425700 <http://www.w3.org/ns/csvw#describes> <http://example.org/resource/companies/67416501> .
+_:g425700 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
+_:g425700 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:g425700 <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-companies.csv#row=4> .
+<http://example.org/resource/companies/00164801> <http://example.org/vocabulary/address> "Vršovická 1442/65 Praha 10010 Czech Republic" .
+<http://example.org/resource/companies/00164801> <http://purl.org/dc/terms/title> "Česká republika - Ministerstvo životního prostředí"@cs .
+<http://example.org/resource/companies/00164801> <http://www.w3.org/2004/02/skos/core#notation> "00164801" .
+_:g425820 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Usage> .
+_:g425820 <http://www.w3.org/ns/prov#entity> <file://root/src/data_formats/.vscode/contracts3.csv-metadata.json> .
+_:g425820 <http://www.w3.org/ns/prov#hadRole> <http://www.w3.org/ns/csvw#tabularMetadata> .
+_:g425460 <http://www.w3.org/ns/csvw#describes> <https://smlouvy.gov.cz/smlouva/1153037/price> .
+_:g425460 <http://www.w3.org/ns/csvw#describes> <https://smlouvy.gov.cz/smlouva/1153037> .
+_:g425460 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
+_:g425460 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:g425460 <http://www.w3.org/ns/csvw#url> <file://root/src/data_formats/.vscode/contracts3-contracts.csv#row=2> .
+<https://smlouvy.gov.cz/smlouva/1153037> <http://example.org/vocabulary/contractingAuthority> <http://example.org/resource/companies/00164801> .
+<https://smlouvy.gov.cz/smlouva/1153037> <http://purl.org/goodrelations/v1#hasPriceSpecification> <https://smlouvy.gov.cz/smlouva/1153037/price> .
+<https://smlouvy.gov.cz/smlouva/1153037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/PublicContract> .
+<https://smlouvy.gov.cz/smlouva/1153037> <http://example.org/vocabulary/publishTime> "2017-02-01T00:13:13+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://smlouvy.gov.cz/smlouva/1153037> <http://example.org/vocabulary/supplier> <http://example.org/resource/companies/67416501> .
+<https://smlouvy.gov.cz/smlouva/1153037> <http://example.org/vocabulary/publisher> "Ing. Miroslava, ředitelka odboru vnitřní správy" .
+<https://smlouvy.gov.cz/smlouva/1153037> <http://purl.org/dc/terms/title> "Pomocné práce v závodní jídelně"@cs .
