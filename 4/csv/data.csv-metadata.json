@@ -56,7 +56,9 @@
 						"dc:description": "ID of distillery",
 						"required": true,
 						"datatype": "string",
-						"aboutUrl": "http://example.org/whiskeyman/{distilleryID}"
+						"aboutUrl": "http://example.org/whiskeyman/{distilleryID}",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/whiskeyman/Distillery"
 					},
 					{
 						"@type": "Column",
@@ -117,8 +119,9 @@
 						"dc:description": "ID of bottle description",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:Description",
-						"aboutUrl": "http://example.org/whiskeyman/{bottleDescriptionID}"
+						"aboutUrl": "http://example.org/whiskeyman/{bottleDescriptionID}",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/whiskeyman/BottleDescription"
 					},
 					{
 						"@type": "Column",
@@ -189,7 +192,9 @@
 						"dc:description": "ID of bottle",
 						"required": true,
 						"datatype": "string",
-						"aboutUrl": "http://example.org/whiskeyman/{bottleID}"
+						"aboutUrl": "http://example.org/whiskeyman/{bottleID}",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/whiskeyman/Bottle"
 					},
 					{
 						"@type": "Column",
@@ -279,7 +284,9 @@
 						"dc:description": "ID of transaction",
 						"required": true,
 						"datatype": "string",
-						"aboutUrl": "http://example.org/whiskeyman/{transactionID}"
+						"aboutUrl": "http://example.org/whiskeyman/{transactionID}",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/whiskeyman/Transaction"
 					},
 					{
 						"@type": "Column",
@@ -367,8 +374,9 @@
 						"dc:description": "percent of share of given bottle",
 						"required": true,
 						"datatype": "int",
-						"propertyUrl": "ex:Share",
-						"aboutUrl": "http://example.org/whiskeyman/{ownershipID}"
+						"aboutUrl": "http://example.org/whiskeyman/{ownershipID}",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/whiskeyman/Ownership"
 					},
 					{
 						"@type": "Column",
@@ -436,7 +444,9 @@
 						"dc:description": "ID of special price",
 						"required": true,
 						"datatype": "string",
-						"aboutUrl": "http://example.org/whiskeyman/{specialPriceID}"
+						"aboutUrl": "http://example.org/whiskeyman/{specialPriceID}",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/whiskeyman/SpecialPrice"
 					},
 					{
 						"@type": "Column",
@@ -524,8 +534,9 @@
 						"dc:description": "ID of NfcTag",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:nfcTag",
-						"aboutUrl": "http://example.org/whiskeyman/{nfcTagID}"
+						"aboutUrl": "http://example.org/whiskeyman/{nfcTagID}",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/whiskeyman/NfcTag"
 					}
 				],
 				"primaryKey": "nfcTagID"
@@ -545,7 +556,9 @@
 						"dc:description": "ID of customer",
 						"required": true,
 						"datatype": "string",
-						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
+						"aboutUrl": "http://example.org/whiskeyman/{customerID}",
+						"propertyUrl": "rdf:type",
+						"valueUrl": "http://example.org/whiskeyman/Customer"
 					},
 					{
 						"@type": "Column",
