@@ -67,7 +67,7 @@
 						"dc:description": "Region ID",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:RegionOf",
+						"propertyUrl": "http://example.org/whiskeyman/RegionOf",
 						"valueUrl": "http://example.org/whiskeyman/{regionID}",
 						"aboutUrl": "http://example.org/whiskeyman/{distilleryID}"
 					},
@@ -89,7 +89,7 @@
 						"dc:description": "Distillery founded on this date",
 						"required": true,
 						"datatype": "int",
-						"propertyUrl": "ex:Founded",
+						"propertyUrl": "http://example.org/whiskeyman/Founded",
 						"aboutUrl": "http://example.org/whiskeyman/{distilleryID}"
 					}
 				],
@@ -130,7 +130,7 @@
 						"dc:description": "ID of destilery it was made in",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:DistilledAt",
+						"propertyUrl": "http://example.org/whiskeyman/DistilledAt",
 						"valueUrl": "http://example.org/whiskeyman/{distilleryID}",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleDescriptionID}"
 					},
@@ -203,7 +203,7 @@
 						"dc:description": "price of the shot",
 						"required": true,
 						"datatype": "int",
-						"propertyUrl": "ex:PriceForML",
+						"propertyUrl": "http://example.org/whiskeyman/PriceForML",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleID}"
 					},
 					{
@@ -213,7 +213,7 @@
 						"dc:description": "describes if bottle is in stock",
 						"required": true,
 						"datatype": "boolean",
-						"propertyUrl": "ex:InStock",
+						"propertyUrl": "http://example.org/whiskeyman/InStock",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleID}"
 					},
 					{
@@ -223,7 +223,7 @@
 						"dc:description": "price of the whole bottle",
 						"required": true,
 						"datatype": "int",
-						"propertyUrl": "ex:PriceForBottle",
+						"propertyUrl": "http://example.org/whiskeyman/PriceForBottle",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleID}"
 					},
 					{
@@ -253,7 +253,7 @@
 						"dc:description": "ID of the description",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:DescribedBy",
+						"propertyUrl": "http://example.org/whiskeyman/DescribedBy",
 						"valueUrl": "http://example.org/whiskeyman/{bottleDescriptionID}",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleID}"
 					}
@@ -295,7 +295,7 @@
 						"dc:description": "Foreign key of customer",
 						"required": false,
 						"datatype": "string",
-						"propertyUrl": "ex:TransactionMadeBY",
+						"propertyUrl": "http://example.org/whiskeyman/TransactionMadeBY",
 						"valueUrl": "http://example.org/whiskeyman/{customerID}",
 						"aboutUrl": "http://example.org/whiskeyman/{transactionID}"
 					},
@@ -306,7 +306,7 @@
 						"dc:description": "Foreign key of customer",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:TransactionedBottle",
+						"propertyUrl": "http://example.org/whiskeyman/TransactionedBottle",
 						"valueUrl": "http://example.org/whiskeyman/{bottleID}",
 						"aboutUrl": "http://example.org/whiskeyman/{transactionID}"
 					},
@@ -317,7 +317,7 @@
 						"dc:description": "Ammount of liquid in transaction in Ml",
 						"required": true,
 						"datatype": "int",
-						"propertyUrl": "ex:AmmountMl",
+						"propertyUrl": "http://example.org/whiskeyman/AmmountMl",
 						"aboutUrl": "http://example.org/whiskeyman/{transactionID}"
 					},
 					{
@@ -385,7 +385,7 @@
 						"dc:description": "ID of ownership",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:Ownership",
+						"propertyUrl": "http://example.org/whiskeyman/Ownership",
 						"aboutUrl": "http://example.org/whiskeyman/{ownershipID}"
 					},
 					{
@@ -395,7 +395,7 @@
 						"dc:description": "id of customer",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:Customer",
+						"propertyUrl": "http://example.org/whiskeyman/Customer",
 						"valueUrl": "http://example.org/whiskeyman/{customerID}",
 						"aboutUrl": "http://example.org/whiskeyman/{ownershipID}"
 					},
@@ -406,7 +406,7 @@
 						"dc:description": "id of bottle",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:OwnedBottle",
+						"propertyUrl": "http://example.org/whiskeyman/OwnedBottle",
 						"valueUrl": "http://example.org/whiskeyman/{bottleID}",
 						"aboutUrl": "http://example.org/whiskeyman/{ownershipID}"
 					}
@@ -455,7 +455,7 @@
 						"dc:description": "id of customer",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:Customer",
+						"propertyUrl": "http://example.org/whiskeyman/Customer",
 						"valueUrl": "http://example.org/whiskeyman/{customerID}",
 						"aboutUrl": "http://example.org/whiskeyman/{specialPriceID}"
 					},
@@ -466,7 +466,7 @@
 						"dc:description": "id of bottle",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "ex:SPBottle ",
+						"propertyUrl": "http://example.org/whiskeyman/SPBottle ",
 						"valueUrl": "http://example.org/whiskeyman/{bottleID}",
 						"aboutUrl": "http://example.org/whiskeyman/{specialPriceID}"
 					},
@@ -477,7 +477,7 @@
 						"dc:description": "new special price",
 						"required": true,
 						"datatype": "int",
-						"propertyUrl": "ex:PriceForML",
+						"propertyUrl": "http://example.org/whiskeyman/PriceForML",
 						"aboutUrl": "http://example.org/whiskeyman/{specialPriceID}"
 					}
 				],
@@ -567,7 +567,7 @@
 						"dc:description": "ID of NFC tag",
 						"required": false,
 						"datatype": "string",
-						"propertyUrl": "ex:NfcTag",
+						"propertyUrl": "http://example.org/whiskeyman/NfcTag",
 						"valueUrl": "http://example.org/whiskeyman/{nfcTagID}",
 						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
 					},
@@ -623,7 +623,7 @@
 						"required": false,
 						"datatype": "string",
 						"lang": "en",
-						"propertyUrl": "ex:Login",
+						"propertyUrl": "http://example.org/whiskeyman/Login",
 						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
 					}
 				],
