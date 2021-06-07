@@ -1,0 +1,526 @@
+{
+  "@id": "https://example.org/whiskeyman/data.csv-metadata.json",
+  "dc:description": "Whiskey Data",
+  "tables": [
+    {
+      "@id": "https://example.org/whiskeyman/data-region.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-region.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-region.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/islay",
+              "regionID": "islay",
+              "schema:name": "Islay"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-region.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/highland",
+              "regionID": "highland",
+              "schema:name": "Highland"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-region.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/speyside",
+              "regionID": "speyside",
+              "schema:name": "Speyside"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-region.csv#row=5",
+          "rownum": 4,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/ireland",
+              "regionID": "ireland",
+              "schema:name": "Ireland"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://example.org/whiskeyman/data-distillery.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-distillery.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-distillery.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/laga",
+              "distilleryID": "laga",
+              "ex:RegionOf": "http://example.org/whiskeyman/islay",
+              "schema:name": "Lagavulin",
+              "ex:Founded": 1816
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-distillery.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/bowm",
+              "distilleryID": "bowm",
+              "ex:RegionOf": "http://example.org/whiskeyman/highland%2Cspeyside",
+              "schema:name": "Bowmore",
+              "ex:Founded": 1779
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-distillery.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/glen",
+              "distilleryID": "glen",
+              "ex:RegionOf": "http://example.org/whiskeyman/speyside",
+              "schema:name": "Glenmorangie",
+              "ex:Founded": 1843
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-distillery.csv#row=5",
+          "rownum": 4,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/redb",
+              "distilleryID": "redb",
+              "ex:RegionOf": "http://example.org/whiskeyman/ireland",
+              "schema:name": "Redbreast",
+              "ex:Founded": 1903
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://example.org/whiskeyman/data-bottleDescription.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-bottleDescription.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottleDescription.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/laga16",
+              "ex:Description": "laga16",
+              "ex:DistilledAt": "http://example.org/whiskeyman/laga",
+              "schema:name": "Lagavulin 16 y.o.",
+              "whisky:age": 16,
+              "whisky:abv": 43
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottleDescription.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/glen15",
+              "ex:Description": "glen15",
+              "ex:DistilledAt": "http://example.org/whiskeyman/glen",
+              "schema:name": "Glenfiddich 15 y.o.",
+              "whisky:age": 15,
+              "whisky:abv": 40
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottleDescription.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/bowm18",
+              "ex:Description": "bowm18",
+              "ex:DistilledAt": "http://example.org/whiskeyman/bowm",
+              "schema:name": "Bowmore 18 y.o.",
+              "whisky:age": 18,
+              "whisky:abv": 43
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottleDescription.csv#row=5",
+          "rownum": 4,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/redb12",
+              "ex:Description": "redb12",
+              "ex:DistilledAt": "http://example.org/whiskeyman/ireland",
+              "schema:name": "Redbreast 12 y.o.",
+              "whisky:age": 12,
+              "whisky:abv": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://example.org/whiskeyman/data-bottle.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-bottle.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottle.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/matyseq_laga16",
+              "bottleID": "matyseq_laga16",
+              "ex:PriceForML": 69,
+              "ex:InStock": false,
+              "ex:PriceForBottle": 1130,
+              "schema:purchaseDate": "1999-09-01T00:00:00",
+              "schema:barcode": 1348690,
+              "ex:DescribedBy": "http://example.org/whiskeyman/laga16"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottle.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/matyseq_glen15",
+              "bottleID": "matyseq_glen15",
+              "ex:PriceForML": 87,
+              "ex:InStock": true,
+              "ex:PriceForBottle": 978,
+              "schema:purchaseDate": "1939-09-01T00:00:00",
+              "schema:barcode": 3454665,
+              "ex:DescribedBy": "http://example.org/whiskeyman/glen15"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottle.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/fojtiseq_laga16",
+              "bottleID": "fojtiseq_laga16",
+              "ex:PriceForML": 76,
+              "ex:InStock": true,
+              "ex:PriceForBottle": 1159,
+              "schema:purchaseDate": "2020-02-20T20:20:20",
+              "schema:barcode": 2345657,
+              "ex:DescribedBy": "http://example.org/whiskeyman/laga16"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottle.csv#row=5",
+          "rownum": 4,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/honziq_redb12",
+              "bottleID": "honziq_redb12",
+              "ex:PriceForML": 90,
+              "ex:InStock": true,
+              "ex:PriceForBottle": 1430,
+              "schema:purchaseDate": "2020-02-20T20:20:20",
+              "schema:barcode": 1235112,
+              "ex:DescribedBy": "http://example.org/whiskeyman/redb12"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-bottle.csv#row=6",
+          "rownum": 5,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/vojta_bowm18",
+              "bottleID": "vojta_bowm18",
+              "ex:PriceForML": 175,
+              "ex:InStock": true,
+              "ex:PriceForBottle": 1930,
+              "schema:purchaseDate": "2021-01-12T12:00:00",
+              "schema:barcode": 7777777,
+              "ex:DescribedBy": "http://example.org/whiskeyman/bowm18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://example.org/whiskeyman/data-transaction.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-transaction.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-transaction.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/tr-00001",
+              "transactionID": "tr-00001",
+              "ex:TransactionMadeBY": "http://example.org/whiskeyman/fojtiseq",
+              "ex:TransactionedBottle": "http://example.org/whiskeyman/matyseq_glen15",
+              "ex:AmmountMl": 200,
+              "schema:Price": 0,
+              "schema:purchaseDate": "2020-12-31T23:57:00"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-transaction.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/tr-00002",
+              "transactionID": "tr-00002",
+              "ex:TransactionMadeBY": "http://example.org/whiskeyman/fojtiseq",
+              "ex:TransactionedBottle": "http://example.org/whiskeyman/fojtiseq_laga16",
+              "ex:AmmountMl": 400,
+              "schema:Price": 120,
+              "schema:purchaseDate": "2020-12-31T23:58:00"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-transaction.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/tr-00003",
+              "transactionID": "tr-00003",
+              "ex:TransactionMadeBY": "http://example.org/whiskeyman/matisek",
+              "ex:TransactionedBottle": "http://example.org/whiskeyman/matyseq_laga16",
+              "ex:AmmountMl": 1000,
+              "schema:Price": 69000,
+              "schema:purchaseDate": "2021-01-12T12:00:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://example.org/whiskeyman/data-ownership.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-ownership.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-ownership.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/ow-10001",
+              "ex:Share": 100,
+              "ex:Ownership": "ow-10001",
+              "ex:Customer": "http://example.org/whiskeyman/fojtiseq",
+              "ex:OwnedBottle": "http://example.org/whiskeyman/fojtiseq_laga16"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-ownership.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/ow-10002",
+              "ex:Share": 50,
+              "ex:Ownership": "ow-10002",
+              "ex:Customer": "http://example.org/whiskeyman/kulicka",
+              "ex:OwnedBottle": "http://example.org/whiskeyman/honziq_redb12"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-ownership.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/ow-10003",
+              "ex:Share": 50,
+              "ex:Ownership": "ow-10003",
+              "ex:Customer": "http://example.org/whiskeyman/matisek",
+              "ex:OwnedBottle": "http://example.org/whiskeyman/honziq_redb12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://example.org/whiskeyman/data-specialPrice.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-specialPrice.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-specialPrice.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/matFor65",
+              "specialPriceID": "matFor65",
+              "ex:Customer": "http://example.org/whiskeyman/matisek",
+              "ex:SPBottle ": "http://example.org/whiskeyman/matyseq_laga16",
+              "ex:PriceForML": 65
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-specialPrice.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/for00",
+              "specialPriceID": "for00",
+              "ex:Customer": "http://example.org/whiskeyman/fojtiseq",
+              "ex:SPBottle ": "http://example.org/whiskeyman/fojtiseq_laga16",
+              "ex:PriceForML": 0
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-specialPrice.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/matFor50",
+              "specialPriceID": "matFor50",
+              "ex:Customer": "http://example.org/whiskeyman/matisek",
+              "ex:SPBottle ": "http://example.org/whiskeyman/honziq_redb12",
+              "ex:PriceForML": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://example.org/whiskeyman/data-nfcTag.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-nfcTag.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-nfcTag.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/testTag",
+              "schema:Text": "OXPR456ADS75",
+              "schema:purchaseDate": "2020-06-09T12:00:00",
+              "ex:nfcTag": "testTag"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-nfcTag.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/fojtisequv",
+              "schema:Text": "OXPC987ADS75",
+              "schema:purchaseDate": "2001-09-11T12:00:00",
+              "ex:nfcTag": "fojtisequv"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-nfcTag.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/kulickuv",
+              "schema:Text": "OXPZ6940ADS75",
+              "schema:purchaseDate": "2012-04-20T12:00:00",
+              "ex:nfcTag": "kulickuv"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-nfcTag.csv#row=5",
+          "rownum": 4,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/listSvobod",
+              "schema:Text": "OXPZ5540ADS75",
+              "schema:purchaseDate": "2022-04-20T12:00:00",
+              "ex:nfcTag": "listSvobod"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "https://example.org/whiskeyman/data-customer.csv-metadata.json",
+      "url": "file://root/src/data_formats/4/csv/data-customer.csv",
+      "row": [
+        {
+          "url": "file://root/src/data_formats/4/csv/data-customer.csv#row=2",
+          "rownum": 1,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/matisek",
+              "customerID": "matisek",
+              "schema:name": "Matyas Brabec",
+              "schema:givenName": "Matyas",
+              "schema:familyName": "Brabec",
+              "schema:email": "Stooped@hotmail.com",
+              "ex:Login": "KutalejiciseKrava"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-customer.csv#row=3",
+          "rownum": 2,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/fojtiseq",
+              "customerID": "fojtiseq",
+              "ex:NfcTag": "http://example.org/whiskeyman/testTag%2Cfojtisequv",
+              "schema:name": "Vojtech Brecka",
+              "schema:givenName": "Vojtech",
+              "schema:familyName": "Brecka",
+              "schema:email": "HyperKraken@hotmail.com",
+              "ex:Login": "TurboKraken"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-customer.csv#row=4",
+          "rownum": 3,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/kulicka",
+              "customerID": "kulicka",
+              "ex:NfcTag": "http://example.org/whiskeyman/kulickuv",
+              "schema:name": "Vojtech Mikiska",
+              "schema:givenName": "Vojtech",
+              "schema:familyName": "Mykiska",
+              "schema:email": "TurboBurt@nitroParek.com",
+              "ex:Login": "TurboBurt"
+            }
+          ]
+        },
+        {
+          "url": "file://root/src/data_formats/4/csv/data-customer.csv#row=5",
+          "rownum": 4,
+          "describes": [
+            {
+              "@id": "http://example.org/whiskeyman/listecek",
+              "customerID": "listecek",
+              "ex:NfcTag": "http://example.org/whiskeyman/listSvobod",
+              "schema:name": "lee stack",
+              "schema:givenName": "Lee",
+              "schema:familyName": "Stack",
+              "schema:email": "Listonoh@ddd.com",
+              "ex:Login": "LeeStack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
