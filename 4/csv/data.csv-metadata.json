@@ -427,13 +427,6 @@
 							"resource": "data-bottle.csv",
 							"columnReference": "bottleID"
 						}
-					},
-					{
-						"columnReference": "customerID",
-						"reference": {
-							"resource": "data-customer.csv",
-							"columnReference": "customerID"
-						}
 					}
 				]
 			}
