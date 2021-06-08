@@ -667,15 +667,15 @@
 					{
 						"columnReference": "OwnershipID",
 						"reference": {
-							"resource": "data-Ownership.csv",
-							"columnReference": "OwnershipID"
+							"resource": "data-ownership.csv",
+							"columnReference": "ownershipID"
 						}
 					},
 					{
 						"columnReference": "SpecialPriceID",
 						"reference": {
-							"resource": "data-SpecialPrice.csv",
-							"columnReference": "SpecialPriceID"
+							"resource": "data-specialPrice.csv",
+							"columnReference": "specialPriceID"
 						}
 					}
 				]
