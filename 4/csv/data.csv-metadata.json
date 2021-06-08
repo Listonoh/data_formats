@@ -227,16 +227,6 @@
 					},
 					{
 						"@type": "Column",
-						"name": "currency",
-						"titles": "currency",
-						"dc:description": "currency of price",
-						"required": true,
-						"datatype": "string",
-						"propertyUrl": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
-						"aboutUrl": "http://example.org/whiskeyman/{bottleID}"
-					},
-					{
-						"@type": "Column",
 						"name": "purchasedDate",
 						"titles": "purchasedDate",
 						"dc:description": "date when was the bottle purchased",
@@ -264,6 +254,16 @@
 						"datatype": "string",
 						"propertyUrl": "http://example.org/whiskeyman/DescribedBy",
 						"valueUrl": "http://example.org/whiskeyman/{bottleDescriptionID}",
+						"aboutUrl": "http://example.org/whiskeyman/{bottleID}"
+					},
+					{
+						"@type": "Column",
+						"name": "currency",
+						"titles": "currency",
+						"dc:description": "currency of price",
+						"required": true,
+						"datatype": "string",
+						"propertyUrl": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleID}"
 					}
 				],
@@ -331,16 +331,6 @@
 					},
 					{
 						"@type": "Column",
-						"name": "currency",
-						"titles": "currency",
-						"dc:description": "currency of price",
-						"required": true,
-						"datatype": "string",
-						"propertyUrl": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
-						"aboutUrl": "http://example.org/whiskeyman/{transactionID}"
-					},
-					{
-						"@type": "Column",
 						"name": "price",
 						"titles": "price",
 						"dc:description": "Price of transaction",
@@ -357,6 +347,16 @@
 						"required": true,
 						"datatype": "datetime",
 						"propertyUrl": "schema:purchaseDate",
+						"aboutUrl": "http://example.org/whiskeyman/{transactionID}"
+					},
+					{
+						"@type": "Column",
+						"name": "currency",
+						"titles": "currency",
+						"dc:description": "currency of price",
+						"required": true,
+						"datatype": "string",
+						"propertyUrl": "http://www.eurocris.org/ontologies/cerif/1.3/currency",
 						"aboutUrl": "http://example.org/whiskeyman/{transactionID}"
 					}
 				],
@@ -573,28 +573,6 @@
 					},
 					{
 						"@type": "Column",
-						"name": "SpecialPriceID",
-						"titles": "SpecialPriceID",
-						"dc:description": "ID of ownership",
-						"required": false,
-						"datatype": "string",
-						"propertyUrl": "http://example.org/whiskeyman/CSpecialPrice",
-						"valueUrl": "http://example.org/whiskeyman/{SpecialPriceID}",
-						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
-					},
-					{
-						"@type": "Column",
-						"name": "OwnershipID",
-						"titles": "OwnershipID",
-						"dc:description": "ID of ownership",
-						"required": false,
-						"datatype": "string",
-						"propertyUrl": "http://example.org/whiskeyman/Owns",
-						"valueUrl": "http://example.org/whiskeyman/{OwnershipID}",
-						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
-					},
-					{
-						"@type": "Column",
 						"name": "nfcTagID",
 						"titles": "nfcTagID",
 						"dc:description": "ID of NFC tag",
@@ -653,6 +631,28 @@
 						"datatype": "string",
 						"propertyUrl": "http://example.org/whiskeyman/Login",
 						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
+					},
+					{
+						"@type": "Column",
+						"name": "OwnershipID",
+						"titles": "OwnershipID",
+						"dc:description": "ID of ownership",
+						"required": false,
+						"datatype": "string",
+						"propertyUrl": "http://example.org/whiskeyman/Owns",
+						"valueUrl": "http://example.org/whiskeyman/{OwnershipID}",
+						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
+					},
+					{
+						"@type": "Column",
+						"name": "SpecialPriceID",
+						"titles": "SpecialPriceID",
+						"dc:description": "ID of ownership",
+						"required": false,
+						"datatype": "string",
+						"propertyUrl": "http://example.org/whiskeyman/CSpecialPrice",
+						"valueUrl": "http://example.org/whiskeyman/{SpecialPriceID}",
+						"aboutUrl": "http://example.org/whiskeyman/{customerID}"
 					}
 				],
 				"primaryKey": "customerID",
@@ -662,6 +662,20 @@
 						"reference": {
 							"resource": "data-nfcTag.csv",
 							"columnReference": "nfcTagID"
+						}
+					},
+					{
+						"columnReference": "OwnershipID",
+						"reference": {
+							"resource": "data-Ownership.csv",
+							"columnReference": "OwnershipID"
+						}
+					},
+					{
+						"columnReference": "SpecialPriceID",
+						"reference": {
+							"resource": "data-SpecialPrice.csv",
+							"columnReference": "SpecialPriceID"
 						}
 					}
 				]
