@@ -1,5 +1,6 @@
 distilleryID,regionID,name,founded
 laga,islay,Lagavulin,1816
-bowm,"highland,speyside",Bowmore,1779
+bowm,highland,Bowmore,1779
+bowm,speyside,Bowmore,1779
 glen,speyside,Glenmorangie,1843
 redb,ireland,Redbreast,1903

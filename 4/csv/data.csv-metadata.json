@@ -121,7 +121,7 @@
 						"datatype": "string",
 						"aboutUrl": "http://example.org/whiskeyman/{bottleDescriptionID}",
 						"propertyUrl": "rdf:type",
-						"valueUrl": "http://example.org/whiskeyman/BottleDescription"
+						"valueUrl": "http://example.org/whiskeyman/Description"
 					},
 					{
 						"@type": "Column",
@@ -451,23 +451,12 @@
 					},
 					{
 						"@type": "Column",
-						"name": "customerID",
-						"titles": "customerID",
-						"dc:description": "id of customer",
-						"required": true,
-						"datatype": "string",
-						"propertyUrl": "http://example.org/whiskeyman/Customer",
-						"valueUrl": "http://example.org/whiskeyman/{customerID}",
-						"aboutUrl": "http://example.org/whiskeyman/{specialPriceID}"
-					},
-					{
-						"@type": "Column",
 						"name": "bottleID",
 						"titles": "bottleID",
 						"dc:description": "id of bottle",
 						"required": true,
 						"datatype": "string",
-						"propertyUrl": "http://example.org/whiskeyman/SPBottle ",
+						"propertyUrl": "http://example.org/whiskeyman/SPBottle",
 						"valueUrl": "http://example.org/whiskeyman/{bottleID}",
 						"aboutUrl": "http://example.org/whiskeyman/{specialPriceID}"
 					},
@@ -499,13 +488,6 @@
 						"reference": {
 							"resource": "data-bottle.csv",
 							"columnReference": "bottleID"
-						}
-					},
-					{
-						"columnReference": "customerID",
-						"reference": {
-							"resource": "data-customer.csv",
-							"columnReference": "customerID"
 						}
 					}
 				]
