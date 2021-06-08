@@ -1,4 +1,4 @@
-share,ownershipID,customerID,bottleID
-100,ow-10001,fojtiseq,fojtiseq_laga16
-50,ow-10002,kulicka,honziq_redb12
-50,ow-10003,matisek,honziq_redb12
+share,ownershipID,bottleID
+100,ow-10001,fojtiseq_laga16
+50,ow-10002,honziq_redb12
+50,ow-10003,honziq_redb12

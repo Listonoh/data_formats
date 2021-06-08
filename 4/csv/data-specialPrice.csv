@@ -1,4 +1,4 @@
-specialPriceID,customerID,bottleID,price
-matFor65,matisek,matyseq_laga16,65
-for00,fojtiseq,fojtiseq_laga16,0
-matFor50,matisek,honziq_redb12,50
+specialPriceID,customerID,bottleID,price,currency
+matFor65,matisek,matyseq_laga16,65,CZK
+for00,fojtiseq,fojtiseq_laga16,0,CZK
+matFor50,matisek,honziq_redb12,50,CZK

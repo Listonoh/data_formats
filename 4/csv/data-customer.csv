@@ -1,6 +1,7 @@
-customerID,nfcTagID,name,givenName,familyName,email,login
-matisek,,Matyas Brabec,Matyas,Brabec,Stooped@hotmail.com,KutalejiciseKrava
-fojtiseq,fojtisequv,Vojtech Brecka,Vojtech,Brecka,HyperKraken@hotmail.com,TurboKraken
-fojtiseq,testTag,Vojtech Brecka,Vojtech,Brecka,HyperKraken@hotmail.com,TurboKraken
-kulicka,kulickuv,Vojtech Mikiska,Vojtech,Mykiska,TurboBurt@nitroParek.com,TurboBurt
-listecek,listSvobod,lee stack,Lee,Stack,Listonoh@ddd.com,LeeStack
+customerID,nfcTagID,name,givenName,familyName,email,login,OwnershipID,SpecialPriceID
+matisek,,Matyas Brabec,Matyas,Brabec,Stooped@hotmail.com,KutalejiciseKrava,ow-10003,matFor65
+matisek,,Matyas Brabec,Matyas,Brabec,Stooped@hotmail.com,KutalejiciseKrava,ow-10003,matFor50
+fojtiseq,fojtisequv,Vojtech Brecka,Vojtech,Brecka,HyperKraken@hotmail.com,TurboKraken,ow-10001,for00
+fojtiseq,testTag,Vojtech Brecka,Vojtech,Brecka,HyperKraken@hotmail.com,TurboKraken,ow-10001,for00 
+kulicka,kulickuv,Vojtech Mikiska,Vojtech,Mykiska,TurboBurt@nitroParek.com,TurboBurt,,
+listecek,listSvobod,lee stack,Lee,Stack,Listonoh@ddd.com,LeeStack,ow-10002,

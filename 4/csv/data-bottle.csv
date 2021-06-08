@@ -1,6 +1,6 @@
-bottleID,shotPrice,inStock,bottlePrice,purchasedDate,barcode,bottleDescriptionID
-matyseq_laga16,69,false,1130,1999-09-01T00:00:00,1348690,laga16
-matyseq_glen15,87,true,978,1939-09-01T00:00:00,3454665,glen15
-fojtiseq_laga16,76,true,1159,2020-02-20T20:20:20,2345657,laga16
-honziq_redb12,90,true,1430,2020-02-20T20:20:20,1235112,redb12
-vojta_bowm18,175,true,1930,2021-01-12T12:00:00,7777777,bowm18
+bottleID,shotPrice,inStock,bottlePrice,purchasedDate,barcode,bottleDescriptionID,currency
+matyseq_laga16,69,false,1130,1999-09-01T00:00:00,1348690,laga16,CZK
+matyseq_glen15,87,true,978,1939-09-01T00:00:00,3454665,glen15,CZK
+fojtiseq_laga16,76,true,1159,2020-02-20T20:20:20,2345657,laga16,CZK
+honziq_redb12,90,true,1430,2020-02-20T20:20:20,1235112,redb12,CZK
+vojta_bowm18,175,true,1930,2021-01-12T12:00:00,7777777,bowm18,CZK
